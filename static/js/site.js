@@ -60,6 +60,6 @@ var hamburgerPanel = document.querySelector(".hamburger.panel");
 var hamburgerToggles = document.querySelectorAll(".hamburger .toggle");
 for(let toggle of hamburgerToggles) {
   toggle.addEventListener("click", e => {
-    hamburgerPanel.classList.toggle("closed");
+    hamburgerPanel.classList.toggle("open");
   });
 }
