@@ -5,7 +5,7 @@
   {{ $lead := index . 0 }}
   <figure>
     <a href="{{ $link }}">
-      <img src="{{ replace $lead.thumb_url "FREE" "LANDSCAPE" }}" srcset="{{ replace $lead.Url "FREE" "LANDSCAPE" }} 1140w"> 
+      <img src="{{ replace (replace $lead.thumb_url "http:" "https:") "FREE" "LANDSCAPE" }}" srcset="{{ replace (replace $lead.Url "http:" "https:") "FREE" "LANDSCAPE" }} 1140w"> 
     </a>
     {{ with $video }}
     <div class="video-overlay">

@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "McClatchy Redesign"
 
 canonifyURLs = true
+disableKinds = ["RSS", "sitemap", "robotsTXT", "404", "taxonomy", "taxonomyTerm"]
+ignoreFiles = ["cs2hugo"]
 
 [[menu.main]]
   name = "HOME"
