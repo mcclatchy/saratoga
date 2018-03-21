@@ -117,9 +117,9 @@
 
 <section class="digest more-news">
   <div class="paper">
-    <div class="label sticky">
+    <a href="/opinion/" class="label sticky">
       <h5>OPINION</h5>
-    </div>
+    </a>
     {{ range $k, $v := first 4 (after 13 $opinion) }}
     <article class="card">
       {{ if eq $k 0 }}{{ partial "lead-asset.html" . }}{{ end }}
@@ -130,7 +130,7 @@
     </article>
     {{ end }}
   </div>
-  <a href="/news/" class="more-link">MORE OPINION</a>
+  <a href="/opinion/" class="more-link">MORE OPINION</a>
 </section>
 
 
