@@ -83,8 +83,12 @@
 }
 
 .logo img {
-  height: 40px;
+  height: 30px;
   max-width: 100%;
+}
+
+[page="home"] .logo img {
+  height: 40px;
 }
 
 .sign-in {
@@ -114,7 +118,7 @@ nav {
 
 nav a {
   padding: 10px 20px;
-  font: 16px "McClatchy Sans";
+  font: 14px "McClatchy Sans";
   color: #757575;
   border-bottom: 3px solid transparent;
 }
