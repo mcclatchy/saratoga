@@ -42,7 +42,7 @@ h6 {
 
 time {
   display: block;
-  font: 400 13px "McClatchy Sans";
+  font: 300 11px/1.2em "McClatchy Sans";
   text-transform: uppercase;
   color: #989898;
 }
