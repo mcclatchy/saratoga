@@ -38,7 +38,6 @@ if(videos) {
     v.addEventListener("click", e => {
       e.preventDefault();
       let i = findIndex(v, videoCards);
-      console.log(i);
       if(i > -1) {
         videos.setAttribute("selected", i);
       }
