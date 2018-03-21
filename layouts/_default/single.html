@@ -6,7 +6,7 @@
   <div class="lead-asset fill">
     <figure class="hug">
       {{ $lead := index . 0 }}
-      <img src="{{ replace $lead.thumb_url "FREE" "LANDSCAPE" }}" srcset="{{ replace $lead.Url "FREE" "LANDSCAPE" }} 1140w"> 
+      <img src="{{ replace (replace $lead.thumb_url "http:" "https:") "FREE" "LANDSCAPE" }}" srcset="{{ replace (replace $lead.Url "http:" "https:") "FREE" "LANDSCAPE" }} 1140w"> 
     </figure>
     <figcaption>{{ $lead.Desc }}</figcaption>
   </div>
