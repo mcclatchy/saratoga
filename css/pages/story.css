@@ -1,0 +1,112 @@
+.story {
+  max-width: 1140px;
+  margin: var(--gap) auto;
+  padding-bottom: var(--gap);
+}
+
+.story > * {
+  max-width: 675px;
+  margin: 30px auto;
+  padding: 0 var(--gap);
+}
+
+.story > .fill {
+  max-width: 100%;
+  padding: 0;
+}
+
+.story > .hug {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/**
+ * Lead Asset
+ */
+
+.lead-asset {
+  margin-top: 0;
+}
+
+.lead-asset figcaption {
+  margin-top: 0;
+  padding: 10px var(--gap);
+  margin: 0 auto;
+  max-width: 675px;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+/**
+ * Header Chunk
+ */
+
+header > * {
+  margin: 10px 0;
+}
+
+header > .kicker {
+  margin-bottom: 0;
+}
+
+.byline {
+  color: #989898;
+  text-transform: uppercase;
+}
+
+.byline span {
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.byline span:first-child {
+  padding-left: 0;
+}
+
+header .author {
+  font-weight: 500;
+}
+
+header .time {
+  font-weight: 400;
+}
+
+/**
+ * Story body
+ */
+
+.story img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+ * Section below
+ */
+
+.grid {
+  max-width: 1140px;
+  grid-row-gap: 50px;
+  margin: var(--gap) auto;
+}
+
+@media (min-width: 450px) {
+  .grid {
+    padding: 20px var(--gap);
+  }
+}
+
+@media (min-width: 690px) {
+  .in-depth, .ad.three {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1020px) {
+  .ad.three {
+    grid-column: auto;
+  }
+
+  .in-depth {
+    grid-column: span 3;
+  }
+}
