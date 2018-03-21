@@ -32,17 +32,18 @@ for(let i = 0, len = sectionNav.length; i < len; i++) {
  */
 
 var videos = document.querySelector(".videos");
-var videoCards = videos.querySelectorAll(".card");
-
-for(let v of videoCards) {
-  v.addEventListener("click", e => {
-    e.preventDefault();
-    let i = findIndex(v, videoCards);
-    console.log(i);
-    if(i > -1) {
-      videos.setAttribute("selected", i);
-    }
-  });
+if(videos) {
+  var videoCards = videos.querySelectorAll(".card");
+  for(let v of videoCards) {
+    v.addEventListener("click", e => {
+      e.preventDefault();
+      let i = findIndex(v, videoCards);
+      console.log(i);
+      if(i > -1) {
+        videos.setAttribute("selected", i);
+      }
+    });
+  }
 }
 
 function findIndex(ele, list) {

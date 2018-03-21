@@ -1,6 +1,8 @@
-baseURL = "http://redesign.org/"
+baseURL = "https://mcclatchy.github.io/saratoga/"
 languageCode = "en-us"
 title = "McClatchy Redesign"
+
+canonifyURLs = true
 
 [[menu.main]]
   name = "HOME"
