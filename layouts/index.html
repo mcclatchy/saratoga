@@ -120,7 +120,7 @@
     <div class="label sticky">
       <h5>OPINION</h5>
     </div>
-    {{ range $k, $v := first 4 (after 10 $opinion) }}
+    {{ range $k, $v := first 4 (after 13 $opinion) }}
     <article class="card">
       {{ if eq $k 0 }}{{ partial "lead-asset.html" . }}{{ end }}
       <div class="card-info">
