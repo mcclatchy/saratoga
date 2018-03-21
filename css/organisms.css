@@ -377,12 +377,14 @@ footer .stay-connected a {
   z-index: 99;
   color: white;
   fill: white;
+  pointer-events: none;
+  transform: translateX(-260px);
   transition: transform .4s ease;
 }
 
-.hamburger.panel.closed {
-  transform: translateX(-260px);
-  pointer-events: none;
+.hamburger.panel.open {
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
 .hamburger.panel .toggle {
