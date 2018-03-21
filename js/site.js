@@ -20,10 +20,10 @@ changePersona();
  * Section Nav
  */
 
-var sectionNav = document.querySelectorAll(".section-nav");
-for(let i = 0, len = sectionNav.length; i < len; i++) {
-  sectionNav[i].addEventListener("click", e => {
-    e.currentTarget.classList.toggle("closed");
+var sectionNav = document.querySelector(".section-nav .toggle");
+if(sectionNav) {
+  sectionNav.addEventListener("click", e => {
+    e.currentTarget.parentElement.classList.toggle("closed");
   });
 }
 
