@@ -33,14 +33,15 @@
 }
 
 .masthead {
+  height: 60px;
   padding: 10px 20px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .masthead a {
-  padding: 10px;
   font: bold 14px "McClatchy Sans";
   line-height: 1em;
   display: inline-flex;
@@ -49,12 +50,30 @@
 }
 
 .hamburger, .sign-in {
-  width: 250px;
+  width: 200px;
+  display: flex;
+  align-items: center;
 }
 
-.hamburger img {
-  height: 21px;
-  margin-right: 5px;
+.hamburger > *, .sign-in > * {
+  padding: 10px;
+}
+
+.hamburger .toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburger .toggle svg {
+  margin-right: 8px;
+}
+
+.hamburger .toggle h5, .hamburger .toggle h4 {
+  position: relative;
+  margin: 0;
+  top: 0.1em;
+  font-family: var(--caption-font);
 }
 
 .logo {
@@ -64,12 +83,11 @@
 }
 
 .logo img {
-  height: 50px;
+  height: 40px;
   max-width: 100%;
 }
 
 .sign-in {
-  display: flex;
   justify-content: flex-end;
 }
 
@@ -84,7 +102,7 @@
 }
 
 @media (max-width: 1024px) {
-  .hamburger, .sign-in {
+  .sign-in {
     display: none;
   }
 }
@@ -343,4 +361,48 @@ footer .stay-connected a {
   footer {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/**
+ * Hamburger panel
+ */
+
+.hamburger.panel {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 260px;
+  background-color: #373737;
+  z-index: 99;
+  color: white;
+  fill: white;
+  transition: transform .4s ease;
+}
+
+.hamburger.panel.closed {
+  transform: translateX(-260px);
+  pointer-events: none;
+}
+
+.hamburger.panel .toggle {
+  padding: 30px 40px;
+}
+
+.hamburger.panel nav {
+  padding: 0;
+  flex-direction: column
+}
+
+.hamburger.panel nav a {
+  padding: 15px 40px 15px 36px;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+  font-size: 14px;
+  color: white;
+}
+
+.hamburger.panel nav a.active {
+  border-left-color: #0066B3;
+  background-color: #222;
 }
