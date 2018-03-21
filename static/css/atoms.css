@@ -1,0 +1,158 @@
+:root {
+  --primary-font: "Lyon";
+  --headline-font: "McClatchy Serif";
+  --caption-font: "McClatchy Sans";
+}
+
+body {
+  margin: 0;
+  font: 18px/1.4em var(--primary-font);
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font: 500 30px/1.2em var(--headline-font);
+}
+
+h2 {
+  font: 400 22px/1.2em var(--headline-font);
+}
+
+h3 {
+  font: 400 18px/1.2em var(--headline-font);
+}
+
+h4 {
+  font: 400 15px/1.2em var(--headline-font);
+}
+
+h5 {
+  font: 500 14px/1.2em var(--caption-font);
+}
+
+h6 {
+  font: 400 11px/1.2em var(--caption-font);
+}
+
+time {
+  display: block;
+  font: 400 13px "McClatchy Sans";
+  text-transform: uppercase;
+  color: #989898;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+figure img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+figcaption {
+  font: 12px/1.2em "McClatchy Sans";
+  color: #757575;
+}
+
+form > * + * {
+  margin-top: 15px;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: white;
+  color: #4A4A4A !important;
+  font-size: 14px;
+  padding: 13px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: auto;
+  padding: 0;
+  background-color: transparent;
+  color: inherit !important;
+}
+
+/**
+ * Typography
+ */
+
+.summary {
+  font: 0.9rem/1.3em var(--caption-font);
+  color: #373737;
+}
+
+.kicker {
+  padding: 5px 10px 3px 10px;
+  border: 1px solid #4A4A4A;
+  border-radius: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+/**
+ * Section labels
+ */
+
+.label {
+  display: flex;
+  justify-content: center;
+}
+
+.label > * {
+  margin: 0;
+  padding: 5px 10px 3px 10px;
+  background-color: #222;
+  color: white;
+  text-transform: uppercase;
+}
+
+.label.sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+/**
+ * More links
+ */
+
+.more-link {
+  display: flex;
+  align-items: center;
+  font: 500 14px/18px "McClatchy Sans";
+  color: #989898;
+  margin: 15px 15px 0;
+}
+
+.more-link:after, .arrow:after {
+  content: "\2192";
+  font-size: 20px;
+  margin-left: 4px;
+}
+
+@media (min-width: 450px) {
+  .more-link {
+    margin-left: 0;
+  }
+}

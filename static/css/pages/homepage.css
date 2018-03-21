@@ -1,0 +1,89 @@
+/**
+ * Mobile
+ */
+
+.main {
+  display: grid;
+  grid-gap: var(--gap);
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: var(--gap) 0;
+}
+
+.ad.one, .ad.two {
+  height: 600px;
+}
+
+.featured .card:nth-of-type(n+6) figure {
+  display: none;
+}
+
+/**
+ * 2 columns
+ */
+
+@media (min-width: 450px) {
+  .main {
+    padding: var(--gap);
+  }
+}
+
+@media (min-width: 690px) {
+  .main {
+    padding: var(--gap);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "featured featured"
+      "special special"
+      "ad1 latest"
+      "local sports"
+      "ad2 newsletter"
+      "food more"
+      "depth depth"
+      "videos videos"
+  }
+
+  .ad.one { grid-area: ad1; } 
+  .ad.two { grid-area: ad2; } 
+  .featured { grid-area: featured; }
+  .food { grid-area: food; } 
+  .in-depth { grid-area: depth; } 
+  .latest-news { grid-area: latest; } 
+  .local-news { grid-area: local; } 
+  .more-news { grid-area: more; } 
+  .newsletter { grid-area: newsletter; } 
+  .special-feature { grid-area: special; }
+  .sports { grid-area: sports; } 
+  .videos { grid-area: videos; }
+
+  .featured .card:nth-of-type(1) {
+    grid-column: span 2;
+  }
+
+  .ad.two {
+    height: 250px;
+  }
+}
+
+/**
+ * 3 columns
+ */
+
+@media (min-width: 1020px) {
+  .main {
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+      "latest featured featured"
+      "ad1 featured featured"
+      "special special special"
+      "local sports newsletter"
+      "depth depth depth"
+      "food more ad2"
+      "videos videos videos"
+  }
+
+  .newsletter {
+    align-self: flex-start;
+  }
+}

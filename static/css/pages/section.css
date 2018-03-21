@@ -1,0 +1,79 @@
+.main {
+  display: grid;
+  grid-gap: var(--gap);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media (min-width: 450px) {
+  .main {
+    padding: var(--gap);
+  }
+}
+
+@media (min-width: 690px) {
+  .main {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .featured, .section-nav {
+    grid-column: span 2;
+  }
+
+  .ad.one {
+    height: 600px;
+  }
+
+  .ad.two {
+    grid-row: 5;
+    grid-column: 2;
+  }
+
+  .ad.two, .ad.three {
+    align-self: center;
+  }
+}
+
+@media (min-width: 1020px) {
+  .main {
+    grid-row-gap: 50px;
+  }
+
+  .latest {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .featured {
+    grid-column: 2 / span 2;
+  }
+
+  /**
+   * A couple of sports differences
+   */
+
+  .sports .latest {
+    grid-row: 2;
+  }
+
+  .sports .section-nav {
+    grid-column: span 3;
+  }
+
+  .ad.one {
+    grid-row: span 3;
+  }
+
+  .card.h2:nth-of-type(1) {
+    grid-row: span 2;
+  }
+
+  .card.h2:nth-of-type(n+2) figure {
+    display: none;
+  }
+
+  .ad.two {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

@@ -1,0 +1,86 @@
+{{ define "content" }}
+{{ $news := where .Site.Pages "Section" "news" }}
+
+<link rel="stylesheet" href="/css/pages/section.css">
+
+{{ if eq .Section "sports" }}
+<div class="section-nav">
+  <div class="toggle">
+    <h1>Sports</h1>
+    <svg width="32" height="32" viewBox="0 0 1792 1792"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>
+  </div>
+  <ul>
+    <li><a href="#"><strong>ALL SPORTS</strong></a></li>
+    <li><a href="#">MIAMI DOLPHINS</a></li>
+    <li><a href="#">MIAMI MARLINS</a></li>
+    <li><a href="#">MIAMI HEAT</a></li>
+    <li><a href="#">UNIVERSITY OF MIAMI</a></li>
+    <li><a href="#">FLORIDA INTERNATIONAL</a></li>
+    <li><a href="#">FLORIDA STATE</a></li>
+    <li><a href="#">FLORIDA PANTHERS</a></li>
+  </ul>
+</div>
+{{ end }}
+
+<div class="featured">
+  {{- range first 1 .Data.Pages }}
+  {{ .Render "h1-card" }}
+  {{ end }}
+</div>
+
+<div class="latest">
+  <div class="paper">
+    <div class="label">
+      <h5>LATEST NEWS</h5>
+    </div>
+    {{ range $k, $v := first 5 $news }}
+    <article class="card"> 
+      <div class="card-info">
+        <h3><a href="{{ .Permalink }}">{{ $v.Title }}</a></h3>
+        <time>{{ dateFormat "January 2, 2006 3:04 pm" $v.Date }}</time>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  <a href="/news/" class="more-link">MORE LATEST NEWS</a>
+</div>
+
+<div class="ad one"></div>
+
+{{ range first 5 (after 1 .Data.Pages) }}
+{{ .Render "h2-card" }}
+{{ end }}
+
+<div class="related-sections paper">
+  <div class="label">
+    <h5>RELATED SECTIONS</h5>
+  </div>
+  <ul>
+    <li class="arrow">ALL SPORTS</li>
+    <li>MIAMI DOLPHINS</li>
+    <li>MIAMI MARLINS</li>
+    <li>MIAMI HEAT</li>
+    <li>UNIVERSITY OF MIAMI</li>
+    <li>FLORIDA INTERNATIONAL</li>
+    <li>FLORIDA STATE</li>
+    <li>FLORIDA PANTHERS</li>
+  </ul>
+</div>
+
+{{ range first 2 (after 6 .Data.Pages) }}
+{{ .Render "h3-card" }}
+{{ end }}
+
+<div class="ad two"></div>
+
+{{ range first 2 (after 8 .Data.Pages) }}
+{{ .Render "h3-card" }}
+{{ end }}
+
+<div class="ad three"></div>
+
+{{ range first 2 (after 10 .Data.Pages) }}
+{{ .Render "h3-card" }}
+{{ end }}
+
+{{ end }}

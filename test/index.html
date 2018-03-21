@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <style>
+      body {
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+
+      .a, .b, .c {
+        height: 400px;
+      }
+
+      .a {
+        background-color: red;
+      }
+
+      .b {
+        background-color: green;
+      }
+
+      .c {
+        background-color: blue;
+      }
+
+      .grid {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        margin: 10px 0;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+      }
+
+      .row > * {
+        flex: 1 1 300px;
+        margin: 10px;
+      }
+
+      .row.one .a { order: 2; }
+      .row.one .b { order: 3; }
+      .row.one .c { order: 1; }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="grid"> -->
+    <!--   <div class="a"></div> -->
+    <!--   <div class="b"></div> -->
+    <!--   <div class="c"></div> -->
+    <!-- </div> -->
+
+    <div class="row one">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+    </div>
+
+    <div class="row">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+    </div>
+  </body>
+</html>

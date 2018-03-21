@@ -1,0 +1,25 @@
+{{ define "content" }}
+<link rel="stylesheet" href="/css/pages/story.css">
+
+<article class="story paper">
+  {{ with .Params.photos }}
+  <div class="lead-asset fill">
+    <figure class="hug">
+      {{ $lead := index . 0 }}
+      <img src="{{ replace $lead.thumb_url "FREE" "LANDSCAPE" }}" srcset="{{ replace $lead.Url "FREE" "LANDSCAPE" }} 1140w"> 
+    </figure>
+    <figcaption>{{ $lead.Desc }}</figcaption>
+  </div>
+  {{ end }}
+
+  <header>
+    <h6 class="kicker">{{ .Section }}</h6>
+    <h1>{{ .Title }}</h1>
+    <h6 class="byline"><span class="author">{{ .Params.Author }}</span> | <span class="time">{{ dateFormat "January 2, 2006 3:04 pm" .Date }}</span></h6>
+  </header>
+
+  {{ .Content | safeHTML }}
+</article>
+
+{{ partial "story-bottom" . }}
+{{ end }}

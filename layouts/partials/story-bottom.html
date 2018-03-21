@@ -1,0 +1,55 @@
+{{ $news := where .Site.Pages "Section" "news" }}
+{{ $food := where .Site.Pages "Section" "food" }}
+{{ $sports := where .Site.Pages "Section" "sports" }}
+<div class="grid">
+  <section class="digest local-news">
+    <div class="paper">
+      <div class="label sticky">
+        <h5>LOCAL NEWS</h5>
+      </div>
+      {{ range $k, $v := first 4 (after 10 $news) }}
+      <article class="card">
+        {{ if eq $k 0 }}{{ partial "lead-asset.html" . }}{{ end }}
+        <div class="card-info">
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <time>{{ dateFormat "January 2, 2006 3:04 pm" .Date }}</time>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    <a href="/news/" class="more-link">MORE NEWS</a>
+  </section>
+
+  <section class="digest sports">
+    <div class="paper">
+      <div class="label sticky">
+        <h5>SPORTS</h5>
+      </div>
+      {{ range $k, $v := first 4 (after 10 $sports) }}
+      <article class="card">
+        {{ if eq $k 0 }}{{ partial "lead-asset.html" . }}{{ end }}
+        <div class="card-info">
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <time>{{ dateFormat "January 2, 2006 3:04 pm" .Date }}</time>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    <a href="/sports/" class="more-link">MORE SPORTS</a>
+  </section>
+
+  <div class="ad three"></div>
+
+  {{ range first 1 (after 5 $sports) }}
+  <article class="in-depth card impact">
+    {{ partial "lead-asset.html" . }}
+    <div class="card-info">
+      <div class="label sticky">
+        <h5>IN DEPTH</h5>
+      </div>
+      <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      <p class="summary">{{ .Summary }}</p>
+    </div>
+  </article>
+  {{ end }}
+</div>

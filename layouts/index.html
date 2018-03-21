@@ -1,0 +1,159 @@
+{{ define "content" }}
+{{ $news := where .Site.Pages "Section" "news" }}
+{{ $food := where .Site.Pages "Section" "food" }}
+{{ $sports := where .Site.Pages "Section" "sports" }}
+{{ $opinion := where .Site.Pages "Section" "opinion" }}
+{{ $latest := where .Site.Pages "Section" "latest" }}
+
+<link rel="stylesheet" href="/css/pages/homepage.css">
+
+<div class="featured grid">
+  {{ range first 1 (where .Data.Pages.ByDate "Section" "!=" "latest") }}
+  {{ .Render "h1-card" }}
+  {{ end }}
+  {{ range first 6 (after 1 (where .Data.Pages "Section" "!=" "latest")) }}
+  {{ .Render "h2-card" }}
+  {{ end }}
+</div>
+
+<div class="ad one"></div>
+
+<section class="latest-news">
+  <div class="paper">
+    <div class="label">
+      <h5>LATEST NEWS</h5>
+    </div>
+    {{ range first 5 $latest }}
+    <article class="card-info"> 
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <time>{{ dateFormat "January 2, 2006 3:04 pm" .Date }}</time>
+    </article>
+    {{ end }}
+  </div>
+  <a href="/latest/" class="more-link">MORE LATEST NEWS</a>
+</section>
+
+{{ range first 1 (after 16 $news) }}
+<article class="special-feature card impact">
+  {{ partial "lead-asset.html" . }}
+  <div class="card-info">
+    <a href="/{{ .Section }}/" class="label sticky">
+      <h5>SPECIAL FEATURE</h5>
+    </a>
+    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <time><span class="author">{{ .Params.Author }}</span> | {{ dateFormat "January 2, 2006 3:04 pm" .Date }}</time>
+  </div>
+</article>
+{{ end }}
+
+<div class="ad two"></div>
+
+<div class="newsletter card impact">
+  <div class="card-info">
+    <h1>5-Minute Star</h1>
+    <p class="summary">The best of the morning's Kansas City Star.</p>
+    <form>
+      <input type="email" name="email" placeholder="Email Address">
+      <div class="more-link">
+        <input type="submit" value="SUBSCRIBE">
+      </div>
+    </form>
+  </div>
+</div>
+
+<section class="digest local-news">
+  <div class="paper">
+    <a href="/news/" class="label sticky">
+      <h5>LOCAL NEWS</h5>
+    </a>
+    {{ range $k, $v := first 4 (after 7 $news) }}
+    <article class="card">
+      {{ if eq $k 0 }}{{ partial "lead-asset.html" . }}{{ end }}
+      <div class="card-info">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <time>{{ dateFormat "January 2, 2006 3:04 pm" .Date }}</time>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  <a href="/news/" class="more-link">MORE NEWS</a>
+</section>
+
+<section class="digest sports">
+  <div class="paper">
+    <a href="/sports/" class="label sticky">
+      <h5>SPORTS</h5>
+    </a>
+    {{ range $k, $v := first 4 (after 10 $sports) }}
+    <article class="card">
+      {{ if eq $k 0 }}{{ partial "lead-asset.html" . }}{{ end }}
+      <div class="card-info">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <time>{{ dateFormat "January 2, 2006 3:04 pm" .Date }}</time>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  <a href="/sports/" class="more-link">MORE SPORTS</a>
+</section>
+
+<section class="digest food">
+  <div class="paper">
+    <a href="/food/" class="label sticky">
+      <h5>FOOD</h5>
+    </a>
+    {{ range $k, $v := first 4 (after 10 $food) }}
+    <article class="card">
+      {{ if eq $k 0 }}{{ partial "lead-asset.html" . }}{{ end }}
+      <div class="card-info">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <time>{{ dateFormat "January 2, 2006 3:04 pm" .Date }}</time>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  <a href="/food/" class="more-link">MORE FOOD</a>
+</section>
+
+<section class="digest more-news">
+  <div class="paper">
+    <div class="label sticky">
+      <h5>OPINION</h5>
+    </div>
+    {{ range $k, $v := first 4 (after 10 $opinion) }}
+    <article class="card">
+      {{ if eq $k 0 }}{{ partial "lead-asset.html" . }}{{ end }}
+      <div class="card-info">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <time>{{ dateFormat "January 2, 2006 3:04 pm" .Date }}</time>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  <a href="/news/" class="more-link">MORE OPINION</a>
+</section>
+
+
+{{ range first 1 (after 5 $sports) }}
+<article class="in-depth card impact">
+  {{ partial "lead-asset.html" . }}
+  <div class="card-info">
+    <a href="/{{ .Section }}/" class="label sticky">
+      <h5>IN DEPTH</h5>
+    </a>
+    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <p class="summary">{{ .Summary }}</p>
+  </div>
+</article>
+{{ end }}
+
+<section class="videos impact" selected="0">
+  <div class="label sticky">
+    <h5>VIDEOS</h5>
+  </div>
+  {{ range first 3 (where .Data.Pages "Params.videos" "!=" nil) }}
+  {{ .Render "h3-card" }}
+  {{ end }}
+</section>
+
+{{ end }}
