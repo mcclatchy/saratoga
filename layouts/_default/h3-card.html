@@ -1,7 +1,7 @@
 <article class="card h3">
   {{ partial "lead-asset.html" . }}
   <div class="card-info">
-    <h6 class="kicker"><a href="/{{ .Section }}/">{{ .Section | upper }}</a></h6>
+    <h6><a class="kicker" href="/{{ .Section }}/">{{ .Section | upper }}</a></h6>
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     <time>{{ dateFormat "January 2, 2006 3:04 pm" .Date }}</time>
   </div>
