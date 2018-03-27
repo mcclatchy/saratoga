@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Atomic Style Guide</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="/css/atoms.css">
+    <link rel="stylesheet" href="/css/molecules.css">
+    <link rel="stylesheet" href="/css/style-guide.css">
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="group">
+        <h1>Atoms</h1>
+        <p>This is a sample paragraph.</p>
+        {{ $atoms := where .Resources "Params.type" "atom" }}
+        {{ range $atoms }}
+        <div class="element">
+          <a name="{{ .Title }}"></a>
+          <h2 class="title">{{ .Title }}</h2>
+          {{ .Content }}
+        </div>
+        {{ end }}
+      </div>
+      <div class="group">
+        <h1>Molecules</h1>
+        {{ $molecules := where .Resources "Params.type" "molecule" }}
+        {{ range $molecules }}
+        <div class="element">
+          <a name="{{ .Title }}"></a>
+          <h2 class="title">{{ .Title }}</h2>
+          {{ .Content }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <nav>
+      <h5>Atoms</h5>
+      {{ range $atoms }}
+      <a href="#{{ .Title }}">{{ .Title }}</a>
+      {{ end }}
+      <h5>Molecules</h5>
+      {{ range $molecules }}
+      <a href="#{{ .Title }}">{{ .Title }}</a>
+      {{ end }}
+    </nav>
+  </body>
+</html>

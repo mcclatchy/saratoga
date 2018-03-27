@@ -8,10 +8,11 @@
 <link rel="stylesheet" href="/css/pages/homepage.css">
 
 <div class="featured grid">
-  {{ range first 1 (where .Data.Pages.ByDate "Section" "!=" "latest") }}
+  {{ $featured := where .Data.Pages "Dir" "not in" (slice "latest/" "style-guide/") }}
+  {{ range first 1 $featured }}
   {{ .Render "h1-card" }}
   {{ end }}
-  {{ range first 6 (after 1 (where .Data.Pages "Section" "!=" "latest")) }}
+  {{ range first 6 (after 1 $featured) }}
   {{ .Render "h2-card" }}
   {{ end }}
 </div>
