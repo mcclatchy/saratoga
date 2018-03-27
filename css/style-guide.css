@@ -1,0 +1,81 @@
+/**
+ * Style guide page
+ */
+
+body {
+  display: flex;
+  font: 16px/1.3em "McClatchy Sans";
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.main {
+  flex: 1;
+  padding: 0 20px;
+  width: calc(100% - 200px);
+  box-sizing: border-box;
+}
+
+.element {
+  padding: 40px 0 60px;
+  border-top: 1px solid #ddd;
+}
+
+.element:first-of-type {
+  padding-top: 0;
+}
+
+.element > * {
+  margin: 20px 0 0;
+}
+
+.element .title {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.element h5:not(.sample) + *, .element input {
+  margin-top: 7px;
+}
+
+pre {
+  padding: 15px;
+  background-color: khaki;
+  border-radius: 2px;
+  overflow-x: scroll;
+}
+
+code {
+  font: 13px/1em monospace;
+}
+
+nav {
+  width: 200px;
+  border-left: 1px solid #ddd;
+  padding: 6px 0 6px;
+}
+
+nav > * {
+  margin: 0;
+  padding: 6px 24px;
+}
+
+nav a {
+  display: block;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: orangered;
+}
+
+nav a + h5 {
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
