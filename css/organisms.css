@@ -14,7 +14,12 @@
 .grid {
   display: grid;
   grid-gap: var(--gap);
-  grid-template-columns: var(--columns);
+}
+
+@media (min-width: 690px) {
+  .grid {
+    grid-template-columns: var(--columns);
+  }
 }
 
 /**

@@ -144,7 +144,7 @@ input[type=submit] {
   margin-left: 4px;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 690px) {
   .more-link {
     margin-left: 0;
   }

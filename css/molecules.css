@@ -125,3 +125,21 @@
   background-color: transparent;
   box-shadow: none;
 }
+
+/**
+ * Newsletter
+ */
+
+.newsletter {
+  align-self: flex-start;
+}
+
+.newsletter .card-info {
+  padding: 30px;
+}
+
+@media (min-width: 690px) {
+  .newsletter .card-info {
+    padding: 15px;
+  }
+}

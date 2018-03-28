@@ -22,12 +22,6 @@
  * 2 columns
  */
 
-@media (min-width: 450px) {
-  .main {
-    padding: var(--gap);
-  }
-}
-
 @media (min-width: 690px) {
   .main {
     padding: var(--gap);
@@ -82,19 +76,16 @@
       "food more ad2"
       "videos videos videos"
   }
-
-  .newsletter {
-    align-self: flex-start;
-  }
 }
 
 /**
  * Flyby persona
  */
 
-@media (min-width: 1350px) {
+@media (min-width: 1305px) {
   [persona=flyby] {
-    max-width: 1290px;
+    max-width: 1245px;
+    grid-column-gap: 15px;
     grid-template-columns: repeat(4, 300px);
     grid-template-areas: 
       "latest featured featured ad1"
@@ -107,6 +98,7 @@
 
   [persona=flyby] .featured {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
   }
 
   [persona=flyby] .special-feature {
