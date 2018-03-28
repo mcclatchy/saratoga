@@ -86,10 +86,17 @@ if(window.IntersectionObserver) {
 }
 
 function handleIntersect(entries, observer) {
+  console.log(entries);
   // Do nothing
   entries.forEach(entry => {
     if(entry.isIntersecting) {
-      entry.target.classList.remove("animate-in");
+      entry.target.classList.remove("animate-in", "animate-out");
+    } else {
+      if(entry.boundingClientRect.top > 0) {
+        entry.target.classList.add("animate-in");
+      } else {
+        entry.target.classList.add("animate-out");
+      }
     }
   });
 }
