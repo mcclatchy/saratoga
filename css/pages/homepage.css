@@ -87,3 +87,34 @@
     align-self: flex-start;
   }
 }
+
+/**
+ * Flyby persona
+ */
+
+@media (min-width: 1350px) {
+  [persona=flyby] {
+    max-width: 1290px;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-areas: 
+      "latest featured featured ad1"
+      "ad2 featured featured newsletter"
+      "sports featured featured food"
+      "videos videos videos videos"
+      "special special local more"
+      "depth depth depth depth";
+  }
+
+  [persona=flyby] .featured {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  [persona=flyby] .special-feature {
+    display: block;
+    align-self: flex-start;
+  }
+
+  [persona=flyby] .special-feature .card-info {
+    padding: 15px;
+  }
+}

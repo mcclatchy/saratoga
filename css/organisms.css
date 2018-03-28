@@ -148,8 +148,7 @@ nav a.active {
 }
 
 .special-feature .card-info {
-  flex: 2 1 300px;
-  padding: var(--gap);
+  flex: 2 1 360px;
   justify-content: center;
 }
 
@@ -158,12 +157,21 @@ nav a.active {
 }
 
 .special-feature time {
+  display: block;
   flex: none;
 }
 
 .special-feature .author {
-  font-weight: 607;
+  font-weight: 600;
   padding-right: 4px;
+  margin-right: 4px;
+  border-right: 1px solid white;
+}
+
+@media (min-width: 570px) {
+  .special-feature .card-info {
+    padding: 35px 30px 30px;
+  }
 }
 
 /**
@@ -181,7 +189,12 @@ nav a.active {
 
 .in-depth .card-info {
   flex: 1 1 250px;
-  padding: 15px var(--gap);
+}
+
+@media (min-width: 930px) {
+  .in-depth .card-info {
+    padding: 30px;
+  }
 }
 
 /**
