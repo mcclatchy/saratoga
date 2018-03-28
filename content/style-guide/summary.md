@@ -18,7 +18,7 @@ The summary atom is specific to story summaries inside cards.
 ##### CSS
 ```
 .summary {
-  font: 0.9rem/1.3em "McClatchy Sans";
+  font: 14px/1.3em "McClatchy Sans";
   color: #373737;
 }
 ```

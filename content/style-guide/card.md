@@ -16,19 +16,48 @@ Lastly, timestamps should always align to the bottom of the card while maintaini
 *Note: in the beta site example, video icon code is placed in this layer and that may or may not be the appropriate spot depending on organization*
 
 ##### Example
-<article class="card h1">
-  <figure>
-    <a href="http://localhost:1313/saratoga/sports/204966589/">
-      <img src="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_640/NAIA%200320%20Clark%20RW" srcset="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_1140/NAIA%200320%20Clark%20RW 1140w"> 
-    </a>
-  </figure>
-  <div class="card-info">
-    <h6><a class="kicker" href="http://localhost:1313/saratoga/sports/">SPORTS</a></h6>
-    <h1><a href="http://localhost:1313/saratoga/sports/204966589/">Graceland comeback gives Heart of America Conference its first NAIA title game appearance</a></h1>
-    <p class="summary">Graceland (Iowa) beat LSU Shreveport and made history Monday in becoming the first school from the Heart of America Athletic Conference to reach an NAIA Division I men's championship game. Graceland will face LSU Alexandria for the title Tuesday.</p>
-    <time>March 19, 2018 10:10 pm</time>
-  </div>
-</article>
+<div class="card-example">
+	<article class="card">
+		<figure>
+			<a href="http://localhost:1313/saratoga/sports/204966589/">
+				<img src="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_640/NAIA%200320%20Clark%20RW" srcset="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_1140/NAIA%200320%20Clark%20RW 1140w"> 
+			</a>
+		</figure>
+		<div class="card-info">
+			<h6><a class="kicker" href="http://localhost:1313/saratoga/sports/">SPORTS</a></h6>
+			<h2><a href="http://localhost:1313/saratoga/sports/204966589/">Graceland comeback gives Heart of America Conference its first NAIA title game appearance</a></h2>
+			<p class="summary">Graceland (Iowa) beat LSU Shreveport and made history Monday in becoming the first school from the Heart of America Athletic Conference to reach an NAIA Division I men's championship game. Graceland will face LSU Alexandria for the title Tuesday.</p>
+			<time>March 19, 2018 10:10 pm</time>
+		</div>
+	</article>
+	<div class="paper">
+		<div class="label"><h5>TRENDING</h5></div>
+		<article class="card">
+			<div class="card-info">
+				<h4>Graceland comeback gives Heart of America Conference its first NAIA title game appearance</h4>
+				<time>March 19, 2018 10:10 pm</time>
+			</div>
+		</article>
+		<article class="card">
+			<div class="card-info">
+				<h4>Graceland comeback gives Heart of America Conference its first NAIA title game appearance</h4>
+				<time>March 19, 2018 10:10 pm</time>
+			</div>
+		</article>
+		<article class="card">
+			<div class="card-info">
+				<h4>Graceland comeback gives Heart of America Conference its first NAIA title game appearance</h4>
+				<time>March 19, 2018 10:10 pm</time>
+			</div>
+		</article>
+		<article class="card">
+			<div class="card-info">
+				<h4>Graceland comeback gives Heart of America Conference its first NAIA title game appearance</h4>
+				<time>March 19, 2018 10:10 pm</time>
+			</div>
+		</article>
+	</div>
+</div>
 
 ##### HTML
 ```
@@ -40,7 +69,7 @@ Lastly, timestamps should always align to the bottom of the card while maintaini
   </figure>
   <div class="card-info">
     <h6><a class="kicker" href="http://localhost:1313/saratoga/sports/">SPORTS</a></h6>
-    <h1><a href="http://localhost:1313/saratoga/sports/204966589/">Graceland comeback gives Heart of America Conference its first NAIA title game appearance</a></h1>
+    <h2><a href="http://localhost:1313/saratoga/sports/204966589/">Graceland comeback gives Heart of America Conference its first NAIA title game appearance</a></h2>
     <p class="summary">Graceland (Iowa) beat LSU Shreveport and made history Monday in becoming the first school from the Heart of America Athletic Conference to reach an NAIA Division I men's championship game. Graceland will face LSU Alexandria for the title Tuesday.</p>
     <time>March 19, 2018 10:10 pm</time>
   </div>

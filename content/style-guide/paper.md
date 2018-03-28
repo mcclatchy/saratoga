@@ -8,7 +8,7 @@ weight: 1
 The paper simply sets a white background with a box shadow. It also has relative positioning for applying a sticky label.
 
 ##### Example
-<div style="background-color: #f4f4f4; padding: 30px;">
+<div class="card-example" style="grid-template-columns: 1fr;">
   <div class="paper" style="min-height: 100px;"></div>
 </div>
 
