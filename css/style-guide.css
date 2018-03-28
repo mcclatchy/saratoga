@@ -79,3 +79,11 @@ nav a + h5 {
     display: none;
   }
 }
+
+.card-example {
+  background-color: #f4f4f4;
+  padding: 30px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}

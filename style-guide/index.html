@@ -288,7 +288,7 @@ input[type=submit] {
 <h5 id="css">CSS</h5>
 
 <pre><code>.summary {
-  font: 0.9rem/1.3em &quot;McClatchy Sans&quot;;
+  font: 14px/1.3em &quot;McClatchy Sans&quot;;
   color: #373737;
 }
 </code></pre>
@@ -433,7 +433,7 @@ input[type=submit] {
 
 <h5 id="example">Example</h5>
 
-<div style="background-color: #f4f4f4; padding: 30px;">
+<div class="card-example" style="grid-template-columns: 1fr;">
   <div class="paper" style="min-height: 100px;"></div>
 </div>
 
@@ -474,19 +474,48 @@ input[type=submit] {
 
 <h5 id="example">Example</h5>
 
-<article class="card h1">
-  <figure>
-    <a href="http://localhost:1313/saratoga/sports/204966589/">
-      <img src="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_640/NAIA%200320%20Clark%20RW" srcset="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_1140/NAIA%200320%20Clark%20RW 1140w"> 
-    </a>
-  </figure>
-  <div class="card-info">
-    <h6><a class="kicker" href="http://localhost:1313/saratoga/sports/">SPORTS</a></h6>
-    <h1><a href="http://localhost:1313/saratoga/sports/204966589/">Graceland comeback gives Heart of America Conference its first NAIA title game appearance</a></h1>
-    <p class="summary">Graceland (Iowa) beat LSU Shreveport and made history Monday in becoming the first school from the Heart of America Athletic Conference to reach an NAIA Division I men's championship game. Graceland will face LSU Alexandria for the title Tuesday.</p>
-    <time>March 19, 2018 10:10 pm</time>
-  </div>
-</article>
+<div class="card-example">
+    <article class="card">
+        <figure>
+            <a href="http://localhost:1313/saratoga/sports/204966589/">
+                <img src="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_640/NAIA%200320%20Clark%20RW" srcset="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_1140/NAIA%200320%20Clark%20RW 1140w"> 
+            </a>
+        </figure>
+        <div class="card-info">
+            <h6><a class="kicker" href="http://localhost:1313/saratoga/sports/">SPORTS</a></h6>
+            <h2><a href="http://localhost:1313/saratoga/sports/204966589/">Graceland comeback gives Heart of America Conference its first NAIA title game appearance</a></h2>
+            <p class="summary">Graceland (Iowa) beat LSU Shreveport and made history Monday in becoming the first school from the Heart of America Athletic Conference to reach an NAIA Division I men's championship game. Graceland will face LSU Alexandria for the title Tuesday.</p>
+            <time>March 19, 2018 10:10 pm</time>
+        </div>
+    </article>
+    <div class="paper">
+        <div class="label"><h5>TRENDING</h5></div>
+        <article class="card">
+            <div class="card-info">
+                <h4>Graceland comeback gives Heart of America Conference its first NAIA title game appearance</h4>
+                <time>March 19, 2018 10:10 pm</time>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-info">
+                <h4>Graceland comeback gives Heart of America Conference its first NAIA title game appearance</h4>
+                <time>March 19, 2018 10:10 pm</time>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-info">
+                <h4>Graceland comeback gives Heart of America Conference its first NAIA title game appearance</h4>
+                <time>March 19, 2018 10:10 pm</time>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-info">
+                <h4>Graceland comeback gives Heart of America Conference its first NAIA title game appearance</h4>
+                <time>March 19, 2018 10:10 pm</time>
+            </div>
+        </article>
+    </div>
+</div>
 
 <h5 id="html">HTML</h5>
 
@@ -498,7 +527,7 @@ input[type=submit] {
   &lt;/figure&gt;
   &lt;div class=&quot;card-info&quot;&gt;
     &lt;h6&gt;&lt;a class=&quot;kicker&quot; href=&quot;http://localhost:1313/saratoga/sports/&quot;&gt;SPORTS&lt;/a&gt;&lt;/h6&gt;
-    &lt;h1&gt;&lt;a href=&quot;http://localhost:1313/saratoga/sports/204966589/&quot;&gt;Graceland comeback gives Heart of America Conference its first NAIA title game appearance&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2&gt;&lt;a href=&quot;http://localhost:1313/saratoga/sports/204966589/&quot;&gt;Graceland comeback gives Heart of America Conference its first NAIA title game appearance&lt;/a&gt;&lt;/h2&gt;
     &lt;p class=&quot;summary&quot;&gt;Graceland (Iowa) beat LSU Shreveport and made history Monday in becoming the first school from the Heart of America Athletic Conference to reach an NAIA Division I men's championship game. Graceland will face LSU Alexandria for the title Tuesday.&lt;/p&gt;
     &lt;time&gt;March 19, 2018 10:10 pm&lt;/time&gt;
   &lt;/div&gt;
@@ -546,6 +575,72 @@ input[type=submit] {
 
         </div>
         
+        <div class="element">
+          <a name=".impact"></a>
+          <h2 class="title">.impact</h2>
+          
+
+<p>The impact class reverses colors to create a visual separation.</p>
+
+<h5 id="example">Example</h5>
+
+<article class="card impact" style="max-width: 400px;">
+  <div class="label sticky">
+    <h5>SPORTS</h5>
+  </div>
+  <figure>
+    <a href="http://localhost:1313/saratoga/sports/204966589/">
+      <img src="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_640/NAIA%200320%20Clark%20RW" srcset="https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_1140/NAIA%200320%20Clark%20RW 1140w"> 
+    </a>
+  </figure>
+  <div class="card-info">
+    <h2><a href="http://localhost:1313/saratoga/sports/204966589/">Graceland comeback gives Heart of America Conference its first NAIA title game appearance</a></h2>
+    <time>March 19, 2018 10:10 pm</time>
+  </div>
+</article>
+
+<h5 id="html">HTML</h5>
+
+<pre><code>&lt;article class=&quot;card impact&quot; style=&quot;max-width: 400px;&quot;&gt;
+  &lt;div class=&quot;label sticky&quot;&gt;
+    &lt;h5&gt;SPORTS&lt;/h5&gt;
+  &lt;/div&gt;
+  &lt;figure&gt;
+    &lt;a href=&quot;http://localhost:1313/saratoga/sports/204966589/&quot;&gt;
+      &lt;img src=&quot;https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_640/NAIA%200320%20Clark%20RW&quot; srcset=&quot;https://www.kansascity.com/latest-news/9rd9dv/picture205954724/ALTERNATES/LANDSCAPE_1140/NAIA%200320%20Clark%20RW 1140w&quot;&gt; 
+    &lt;/a&gt;
+  &lt;/figure&gt;
+  &lt;div class=&quot;card-info&quot;&gt;
+    &lt;h2&gt;&lt;a href=&quot;http://localhost:1313/saratoga/sports/204966589/&quot;&gt;Graceland comeback gives Heart of America Conference its first NAIA title game appearance&lt;/a&gt;&lt;/h2&gt;
+    &lt;time&gt;March 19, 2018 10:10 pm&lt;/time&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+
+<h5 id="css">CSS</h5>
+
+<pre><code>.impact {
+  background-color: var(--impact-color);
+}
+
+.impact * {
+  color: white;
+  border-color: white;
+}
+
+.impact .label &gt; * {
+  background-color: white;
+  color: #222;
+}
+
+.impact .card {
+  background-color: transparent;
+  box-shadow: none;
+}
+</code></pre>
+
+        </div>
+        
       </div>
     </div>
 
@@ -583,6 +678,8 @@ input[type=submit] {
       <a href="#.paper">.paper</a>
       
       <a href="#.card">.card</a>
+      
+      <a href="#.impact">.impact</a>
       
     </nav>
   </body>
