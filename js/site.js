@@ -56,10 +56,57 @@ function findIndex(ele, list) {
  * Hamburger panel
  */
 
-var hamburgerPanel = document.querySelector(".hamburger.panel");
 var hamburgerToggles = document.querySelectorAll(".hamburger .toggle");
 for(let toggle of hamburgerToggles) {
   toggle.addEventListener("click", e => {
-    hamburgerPanel.classList.toggle("open");
+    document.body.classList.toggle("hamburger-menu-out");
   });
+}
+
+/**
+ * Scroll animation
+ */
+
+
+if(window.IntersectionObserver) {
+  // Create the observer
+  let observer = new IntersectionObserver(handleIntersect);
+
+  // Grab all the elements to animate
+  let elements = mergeQuerySelections([
+    '.main > .card',
+    '.featured .card',
+    '.digest'
+  ]);
+
+  elements.forEach(ele => {
+    ele.classList.add("animate-in");
+    observer.observe(ele);
+  });
+}
+
+function handleIntersect(entries, observer) {
+  // Do nothing
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.remove("animate-in");
+    }
+  });
+}
+
+function mergeQuerySelections(selectors) {
+  let elements = [];
+
+  selectors.forEach(q => {
+    let nodes = document.querySelectorAll(q);
+    for(let i = 0, len = nodes.length; i < len; i++) {
+      elements.push(nodes[i]);
+    }
+  });
+
+  return elements;
+  let q = document.querySelectorAll(selector);
+  for(let i = 0, len = q.length; i < len; i++) {
+    array.push(q)
+  }
 }
