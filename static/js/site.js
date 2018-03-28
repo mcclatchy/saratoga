@@ -86,17 +86,10 @@ if(window.IntersectionObserver) {
 }
 
 function handleIntersect(entries, observer) {
-  console.log(entries);
-  // Do nothing
   entries.forEach(entry => {
     if(entry.isIntersecting) {
-      entry.target.classList.remove("animate-in", "animate-out");
-    } else {
-      if(entry.boundingClientRect.top > 0) {
-        entry.target.classList.add("animate-in");
-      } else {
-        entry.target.classList.add("animate-out");
-      }
+      entry.target.classList.remove("animate-in");
+      observer.unobserve(entry.target);
     }
   });
 }
@@ -112,8 +105,4 @@ function mergeQuerySelections(selectors) {
   });
 
   return elements;
-  let q = document.querySelectorAll(selector);
-  for(let i = 0, len = q.length; i < len; i++) {
-    array.push(q)
-  }
 }

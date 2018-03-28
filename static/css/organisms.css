@@ -452,8 +452,3 @@ body.hamburger-menu-out .masthead .hamburger .toggle {
   opacity: 0;
   transform: translateY(50px);
 }
-
-.animate-out {
-  opacity: 0;
-  transform: translateY(-50px);
-}
