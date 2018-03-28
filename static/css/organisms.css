@@ -381,18 +381,11 @@ footer .stay-connected a {
   z-index: 99;
   color: white;
   fill: white;
-  pointer-events: none;
   transform: translateX(-260px);
-  transition: transform .4s ease;
-}
-
-.hamburger.panel.open {
-  transform: translateX(0);
-  pointer-events: auto;
 }
 
 .hamburger.panel .toggle {
-  padding: 30px 40px;
+  padding: 20px 40px;
 }
 
 .hamburger.panel nav {
@@ -411,4 +404,51 @@ footer .stay-connected a {
 .hamburger.panel nav a.active {
   border-left-color: #0066B3;
   background-color: #222;
+}
+
+/* Hamburger menu animation */
+
+body, .hamburger {
+  transition: transform .4s ease;
+}
+
+body.hamburger-menu-out {
+  transform: translateX(260px);
+  overflow: hidden;
+}
+
+body.hamburger-menu-out:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+body.hamburger-menu-out .masthead .hamburger {
+  transform: translateX(-100px);
+}
+
+body.hamburger-menu-out .masthead .hamburger .toggle {
+  visibility: hidden;
+}
+
+/**
+ * Card Animation
+ */
+
+.card, .digest {
+  transition: opacity .2s ease-in, transform .3s ease-in;
+}
+
+.card:nth-of-type(odd), .digest:nth-of-type(odd) {
+  transition-delay: .2s;
+}
+
+.animate-in {
+  opacity: 0;
+  transform: translateY(50px);
 }
