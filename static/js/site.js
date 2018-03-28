@@ -68,7 +68,7 @@ for(let toggle of hamburgerToggles) {
  */
 
 
-if(window.IntersectionObserver) {
+if(window.IntersectionObserver && window.pageYOffset < 100) {
   // Create the observer
   let observer = new IntersectionObserver(handleIntersect);
 
