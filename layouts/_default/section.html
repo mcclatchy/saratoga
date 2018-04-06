@@ -45,7 +45,7 @@
   <a href="/news/" class="more-link">MORE LATEST NEWS</a>
 </div>
 
-<div class="ad one"></div>
+<div class="ad one" data-glade data-ad-unit-path="/7675/KCM.site_kansascity/{{ humanize .Section }}" width="300" height="600"></div>
 
 {{ range first 5 (after 1 .Data.Pages) }}
 {{ .Render "h2-card" }}
@@ -71,13 +71,12 @@
 {{ .Render "h3-card" }}
 {{ end }}
 
-<div class="ad two"></div>
+<div class="ad two" data-glade data-ad-unit-path="/7675/KCM.site_kansascity/{{ humanize .Section }}" width="300" height="250"></div>
 
 {{ range first 2 (after 8 .Data.Pages) }}
 {{ .Render "h3-card" }}
 {{ end }}
-
-<div class="ad three"></div>
+<div class="ad three" data-glade data-ad-unit-path="/7675/KCM.site_kansascity/{{ humanize .Section }}" width="300" height="250"></div>
 
 {{ range first 2 (after 10 .Data.Pages) }}
 {{ .Render "h3-card" }}

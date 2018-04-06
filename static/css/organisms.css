@@ -460,6 +460,7 @@ body.hamburger-menu-out .masthead .hamburger .toggle {
 
 .card, .digest {
   transition: opacity .2s ease-in, transform .3s ease-in;
+  will-change: transform;
 }
 
 .card:nth-of-type(odd), .digest:nth-of-type(odd) {
