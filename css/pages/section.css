@@ -20,10 +20,6 @@
     grid-column: span 2;
   }
 
-  .ad.one {
-    height: 600px;
-  }
-
   .ad.two {
     grid-row: 5;
     grid-column: 2;

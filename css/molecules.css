@@ -12,10 +12,11 @@
  */
 
 .ad {
-  width: 300px;
-  height: 250px;
-  background-color: skyblue;
   justify-self: center;
+}
+
+.ad > div {
+  background-color: #ddd;
 }
 
 /**

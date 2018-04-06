@@ -88,8 +88,10 @@ if(window.IntersectionObserver && window.pageYOffset < 100) {
 function handleIntersect(entries, observer) {
   entries.forEach(entry => {
     if(entry.isIntersecting) {
-      entry.target.classList.remove("animate-in");
-      observer.unobserve(entry.target);
+      requestAnimationFrame(() => {
+        entry.target.classList.remove("animate-in");
+        observer.unobserve(entry.target);
+      });
     }
   });
 }
