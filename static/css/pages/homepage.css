@@ -64,7 +64,7 @@
     grid-row-gap: 50px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-      "banner banner banner"
+      /* "banner banner banner" */
       "latest featured featured"
       "ad1 featured featured"
       "special special special"
