@@ -58,17 +58,9 @@ function findIndex(ele, list) {
 
 var hamburgerToggles = document.querySelectorAll(".hamburger .toggle");
 for(let toggle of hamburgerToggles) {
-  let html = document.documentElement;
-
   toggle.addEventListener("click", e => {
-    html.classList.toggle("menu");
+    document.documentElement.classList.toggle("menu");
   });
-
-  if(html.classList.contains("menu")) {
-    document.ontouchmove = e => { e.preventDefault() };
-  } else {
-    document.ontouchmove = () => { return true; };
-  }
 }
 
 /**
