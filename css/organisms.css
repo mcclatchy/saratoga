@@ -391,15 +391,15 @@ footer .stay-connected a {
 
 .hamburger.panel {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: 260px;
+  left: -260px;
   background-color: #373737;
-  z-index: 99;
   color: white;
   fill: white;
-  transform: translateX(-260px);
+  z-index: 4;
 }
 
 .hamburger.panel .toggle {
@@ -432,6 +432,7 @@ html, .masthead .hamburger {
 
 html.menu {
   width: 100vw;
+  height: 100vh;
   overflow: hidden;
   transform: translateX(260px);
 }
