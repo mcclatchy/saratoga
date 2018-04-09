@@ -426,16 +426,16 @@ footer .stay-connected a {
 
 /* Hamburger menu animation */
 
-body, .hamburger {
+html, .masthead .hamburger {
   transition: transform .4s ease;
 }
 
-body.hamburger-menu-out {
+html.menu {
   transform: translateX(260px);
   overflow: hidden;
 }
 
-body.hamburger-menu-out:after {
+html.menu:after {
   content: '';
   position: fixed;
   top: 0;
@@ -446,11 +446,11 @@ body.hamburger-menu-out:after {
   z-index: 3;
 }
 
-body.hamburger-menu-out .masthead .hamburger {
+html.menu .masthead .hamburger {
   transform: translateX(-100px);
 }
 
-body.hamburger-menu-out .masthead .hamburger .toggle {
+html.menu .masthead .hamburger .toggle {
   visibility: hidden;
 }
 

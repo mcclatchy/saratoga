@@ -59,7 +59,7 @@ function findIndex(ele, list) {
 var hamburgerToggles = document.querySelectorAll(".hamburger .toggle");
 for(let toggle of hamburgerToggles) {
   toggle.addEventListener("click", e => {
-    document.body.classList.toggle("hamburger-menu-out");
+    document.documentElement.classList.toggle("menu");
   });
 }
 
