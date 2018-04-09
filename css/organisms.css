@@ -431,9 +431,9 @@ html, .masthead .hamburger {
 }
 
 html.menu {
-  transform: translateX(260px);
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
+  transform: translateX(260px);
 }
 
 html.menu:after {
