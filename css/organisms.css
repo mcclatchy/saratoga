@@ -391,15 +391,18 @@ footer .stay-connected a {
 
 .hamburger.panel {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   width: 260px;
-  left: -260px;
   background-color: #373737;
   color: white;
   fill: white;
   z-index: 4;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  transition: transform .4s ease;
+  transform: translateX(-260px);
 }
 
 .hamburger.panel .toggle {
@@ -426,18 +429,11 @@ footer .stay-connected a {
 
 /* Hamburger menu animation */
 
-html, .masthead .hamburger {
-  transition: transform .4s ease;
+body.menu .hamburger.panel {
+  transform: translateX(0);
 }
 
-html.menu {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  transform: translateX(260px);
-}
-
-html.menu:after {
+body.menu:after {
   content: '';
   position: absolute;
   top: 0;
@@ -448,13 +444,6 @@ html.menu:after {
   z-index: 3;
 }
 
-html.menu .masthead .hamburger {
-  transform: translateX(-100px);
-}
-
-html.menu .masthead .hamburger .toggle {
-  visibility: hidden;
-}
 
 /**
  * Card Animation

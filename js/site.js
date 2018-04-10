@@ -59,7 +59,7 @@ function findIndex(ele, list) {
 var hamburgerToggles = document.querySelectorAll(".hamburger .toggle");
 for(let toggle of hamburgerToggles) {
   toggle.addEventListener("click", e => {
-    document.documentElement.classList.toggle("menu");
+    document.body.classList.toggle("menu");
   });
 }
 
@@ -68,7 +68,7 @@ for(let toggle of hamburgerToggles) {
  */
 
 
-if(window.IntersectionObserver && window.pageYOffset < 100) {
+if(window.IntersectionObserver && window.matchMedia("(max-width: 768px)").matches) {
   // Create the observer
   let observer = new IntersectionObserver(handleIntersect);
 
