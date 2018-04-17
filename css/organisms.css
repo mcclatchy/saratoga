@@ -39,28 +39,34 @@
 
 .masthead {
   height: 60px;
-  padding: 10px 20px;
+  padding: 10px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.masthead a {
-  font: bold 14px "McClatchy Sans";
-  line-height: 1em;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
+.logo {
+  display: flex;
 }
 
-.hamburger, .sign-in {
-  width: 200px;
+.logo img {
+  height: 30px;
+  max-width: 100%;
+}
+
+[page="home"] .logo img {
+  height: 40px;
+}
+
+.hamburger {
   display: flex;
   align-items: center;
+  margin-right: 10px;
+  flex: 1;
 }
 
-.hamburger > *, .sign-in > * {
+.hamburger > * {
   padding: 10px;
 }
 
@@ -81,23 +87,17 @@
   font-family: "McClatchy Sans";
 }
 
-.logo {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.logo img {
-  height: 30px;
-  max-width: 100%;
-}
-
-[page="home"] .logo img {
-  height: 40px;
-}
-
 .sign-in {
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
+  margin-left: 10px;
+  flex: 1;
+}
+
+.sign-in a {
+  padding: 6px 12px 2px;
+  font: 500 14px "McClatchy Sans";
 }
 
 .sign-in a.reverse {
@@ -110,8 +110,33 @@
   top: 0.1em;
 }
 
-@media (max-width: 850px) {
-  .sign-in {
+.subscribe-icon-button {
+  display: none;
+  padding: 10px;
+}
+
+@media (max-width: 1200px) {
+  .hamburger .label {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .search-button {
+    display: none;
+  }
+
+  .sign-in a, .weather-button {
+    display: none;
+  }
+
+  .subscribe-icon-button {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .ereader-button {
     display: none;
   }
 }
