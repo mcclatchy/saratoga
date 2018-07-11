@@ -6,7 +6,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* background-color: #222; */
   min-height: 56.25vw;
   cursor: pointer;
 }
