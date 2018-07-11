@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+}
+
+.video-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #222; */
+  min-height: 56.25vw;
+  cursor: pointer;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.6)
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.video-text {
+  position: relative;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.play-button {
+  margin-bottom: 15px;
+}
+
+.video-text > * {
+  max-width: 720px;
+}
+
+.video-text h1 {
+  font: 400 64px/1.1em "McClatchy Serif";
+  margin: 0;
+}
+
+.fade {
+  transition: opacity .4s ease, height .8s ease, color .4s ease;
+}
+
+.kicker {
+  display: inline-block;
+  padding: 5px 10px 3px 10px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font: 400 11px/1.2em "McClatchy Sans";
+}
+
+/**
+ * This would need to be adjusted to specific points
+ */
+
+@media (max-width: 720px) {
+  .video-text h1 {
+    font-size: 10vw;
+  }
+}
+
+/**
+ * Portrait phone doesn't do the overlay
+ */
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .video-container {
+    min-height: 110vw;
+  }
+
+  video {
+    position: relative;
+    height: auto;
+  }
+
+  .video-playing .play-button {
+    opacity: 0;
+    height: 0;
+  }
+
+  .video-playing .video-text {
+    color: black;
+  }
+
+  .video-playing .kicker {
+    border-color: black;
+  }
+}
+
+@media (min-width: 601px) {
+  .video-playing .video-text {
+    opacity: 0;
+  }
+}
+
+/**
+ * Video playing
+ */
+
+.video-playing .video-background {
+  opacity: 0;
+}
+
+.video-playing video {
+  opacity: 1;
+}
