@@ -18,9 +18,12 @@
   </head>
 
   <body>
+    <h1>Coming up with a design system</h1>
+    <p>We adopted the atomic design methodology to ensure consistency between our products, make communication better, and to make development of our designs easier. In doing so, we created a system of elements that can be used together to build our pages. We started from the ground up, and were very careful to design each layer adhering to all previous choices.</p>
+
     <h1>Atoms and Typograhy | <small><a href="./css/atoms.css" class="code" target="_blank">atoms.css</a></small></h1>
-    <p>During our design process we had a lot of discussion defining atoms and understanding how our definition of them would affect our current design goals, possible future goals and development. After creating multiple test pages to determine how different organizational structures interacted with each other, and identifiying potential bottlenecks with development, we decided that the most flexible definition of atoms was each piece of text itself.</p>
-    <p>We took all native HTML text items, along with a handful of custom classes, and defined styles that you can see in our <a href="./css/atoms.css">atoms.css</a> file. We kept it basic and decided to only define the font properties at this level. When we began organizing our designs into repeatable molecules, we noticed that things like spacing were more dependant on the molecule than the atoms that comprised the molecule.</p>
+    <p>During our design process we had a lot of discussion defining atoms and understanding how our definition of them would affect our current design goals, possible future goals and development. After creating multiple test pages to determine how different organizational structures interacted with each other, and identifying potential bottlenecks with development, we decided that the most flexible definition of atoms was each piece of text itself.</p>
+    <p>We took all native HTML text items, along with a handful of custom classes, and defined styles that you can see in our <a href="./css/atoms.css">atoms.css</a> file. We kept it basic and decided to only define the font properties at this level. When we began organizing our designs into repeatable molecules, we noticed that things like spacing were more dependent on the molecule than the atoms that comprised the molecule.</p>
 
     <h1>Molecules | <small><a href="./css/molecules.css" class="code" target="_blank">molecules.css</a></small></h1>
     <p>Once we had defined the rules for text we started identifying the repeatable elements of our designs. Trying to adhere to the methodology, we didn't allow ourselves to alter the rules we had previously set. In doing so, we immediately saw the advantages of the methodology. Molecules required very little CSS to separate themselves and were extremely flexible. We identified three base molecules with a few variations.</p>
@@ -51,7 +54,7 @@
       </div>
     </div>
 
-    <p>Stacking these together we were able to build most of the page. We followed the naming convention of Google's Material Design because it made sense and thought it might help fascilitate communication going forward.</p>
+    <p>Stacking these together we were able to build most of the page. We followed the naming convention of Google's Material Design because it made sense and thought it might help facilitate communication going forward.</p>
 
     <h2>paper</h2>
     <p>The paper molecule was really just a base class for a white background and the shadow raised effect. The card molecule is an extension of paper and inherits some of the same properties.</p>
@@ -75,7 +78,7 @@
     </div>
 
     <h2>card-info</h2>
-    <p>The card-info molecule primarily defines spacing of it's children. We took extra care to ensure that this molecule was used in as many places as possible, so it is the base structure for linked articles in both grids and stacks. It is defined as a flexible container and set to grow inside flexible containers to ensure that when used as a direct child of a grid the elements align.</p>
+    <p>The card-info molecule primarily defines spacing of its children. We took extra care to ensure that this molecule was used in as many places as possible, so it is the base structure for linked articles in both grids and stacks. It is defined as a flexible container and set to grow inside flexible containers to ensure that when used as a direct child of a grid the elements align.</p>
 
     <div class="grid halves">
       <div>
@@ -148,7 +151,7 @@
     </div>
 
     <h1>Flexibility</h1>
-    <p>This setup is very flexible and we were able to make many of the elements on the page just restructuring simple HTML and adding light impactful styles for things like the newsletter card.</p>
+    <p>This setup is very flexible, and we were able to make many of the elements on the page just restructuring simple HTML and adding light impactful styles for things like the newsletter card.</p>
 
     <div class="grid">
       <div class="card">
@@ -380,7 +383,7 @@
     <h1>Flexbox and the page layout</h1>
     <p>One of the tricks to keep flexbox working well is very shallow DOM, since every additional layer requires the layout be redefined in order to stretch. Properties like height and width should also be avoided to let flexbox figure things out for us. Doing so may occasionally cause inconsistencies when page elements vary greatly in height, but this is acceptable under most circumstances.</p>
     <p>Another advantage of this system is that elements will behave as block level elements unless they are placed inside a flex row or grid. For example, the latest news and food digests above are using the default block display. Because of this, the card-info molecules placed inside behave as block level elements and the spacing from those elements is consistent using the defaults. This same behavior occurs on mobile displays where flexbox should not be defined. Without a reason to stretch, each card will collapse to only use the area that it needs following the default spacing rules.</p>
-    <p>In contrast the grid of cards with images is using a flexible grid display causing the flex definitions on both card and card-info to kick in. Because of the shallow nature of this DOM it requires very few CSS rules.</p>
+    <p>In contrast, the grid of cards with images is using a flexible grid display causing the flex definitions on both card and card-info to kick in. Because of the shallow nature of this DOM it requires very few CSS rules.</p>
 
     <div class="grid halves">
       <article class="card show-meat">
@@ -501,7 +504,7 @@
     </div>
 
     <h1>Personalization</h1>
-    <p>The primary motivator for all of our discussion was the goal to incoporate personalization in the future. We know we need a solid system that we can rely on heavily going forward. Without it the workload will overrun both groups. There are, of course, many solutions to personalization and all should be considered. During our design process we continued to make the assumption that Adobe Target would be the engine, which was adequate for our group to understand how our molecules would react under different circumstances. Click through the tabs below to see an example of the design system being shuffled around.</p>
+    <p>The primary motivator for all of our discussion was the goal to incorporate personalization in the future. We know we need a solid system that we can rely on heavily going forward. Without it the workload will overrun both groups. There are, of course, many solutions to personalization and all should be considered. During our design process we continued to make the assumption that Adobe Target would be the engine, which was adequate for our group to understand how our molecules would react under different circumstances. Click through the tabs below to see an example of the design system being shuffled around.</p>
     <p><em>Note: These stories are completely fabricated and do not represent any actual business goal. They are good illustrations of the design system in flux.</em></p>
 
     <div>
