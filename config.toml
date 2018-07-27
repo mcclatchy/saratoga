@@ -5,6 +5,7 @@ title = "McClatchy Redesign"
 canonifyURLs = true
 disableKinds = ["RSS", "sitemap", "robotsTXT", "404", "taxonomy", "taxonomyTerm"]
 ignoreFiles = ["cs2hugo"]
+pluralizeListTitles = false
 
 [[menu.main]]
   name = "HOME"

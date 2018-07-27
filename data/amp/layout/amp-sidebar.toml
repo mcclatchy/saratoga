@@ -1,0 +1,5 @@
+name = "<amp-sidebar>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-sidebar"
+summary = '''
+Relay Media uses this for the hamburger menu funcitonality, and that's what it's for mostly. It can be linked up to other elements on the page, like the actual hamburger icon, to open and close.
+'''

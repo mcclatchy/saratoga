@@ -1,0 +1,7 @@
+name = "<amp-accordion>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-accordion.html"
+summary = '''
+
+A standard accordion. It can be used to toggle elements in a list, or for concepts like a "show more" button.
+
+'''

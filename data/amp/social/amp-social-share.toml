@@ -1,0 +1,5 @@
+name = "<amp-social-share>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-social-share"
+summary = '''
+Your basic row of social media icons to share the story #usethephone. This component is actually very easy to use and is well built. 
+'''

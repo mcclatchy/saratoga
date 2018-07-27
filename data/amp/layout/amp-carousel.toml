@@ -1,0 +1,9 @@
+name = "<amp-carousel>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-carousel.html"
+summary = '''
+
+A basic photo gallery. The most direct way of using it is to load it up with a stack of `<amp-img>` tags. The component provides the arrows and interactive elements. There are severl different types of display all packaged into one element, so I recommend reading this one thouroughly if we want to use it.
+
+Technically, the carousel will work with any div placed inside it. We could think out of the box for use cases, but generally speaking carousels should be doused in kerosone and ignited for warmth.
+
+'''

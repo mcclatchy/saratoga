@@ -1,0 +1,9 @@
+name = "<amp-list>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-list"
+summary = '''
+
+This component fetches a JSON file remotely and can run the data through a mustache template. Although it's probably not something the be included in a story body by reporters, it may come in useful when building the bottom of the story page or in personaliation."
+
+*Note:* There is a cousin component called `<amp-live-list>` that can refresh without reloading the page. Our time on site is probably short enough this doesn't matter though.
+
+'''

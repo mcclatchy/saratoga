@@ -1,0 +1,7 @@
+name = "<amp-position-observer>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-position-observer"
+summary = '''
+
+I recommend reading through this one a couple of times for ideas. This is an under-the-hood component tha tcan be linked to others to produce scroll effects.
+
+'''

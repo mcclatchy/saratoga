@@ -1,0 +1,103 @@
+/**
+ * AMP demo stylesheet
+ */
+
+.main {
+  background-color: white;
+  padding: 35px 0;
+}
+
+.main > * {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  max-width: 720px;
+}
+
+.main a {
+  color: orangered;
+}
+
+.main .ghost {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid #222;
+  color: inherit;
+  font: 14px/1em sans-serif;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  font-size: 14px;
+}
+
+.main code {
+  display: inline-block;
+  background-color: antiquewhite;
+  padding: 2px 4px;
+}
+
+.main h3 {
+  font-family: monospace;
+}
+
+.panel {
+  background-color: #f2f2f2;
+  max-width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: var(--gap);
+  box-shadow: inset 0px 10px 5px -9px #999, inset 0px -11px 5px -9px #999;
+  box-sizing: border-box;
+}
+
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.grid.social {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid + .grid {
+  padding-top: var(--gap);
+}
+
+.grid.social > .card {
+  align-self: flex-start;
+}
+
+.card > figure {
+  margin: 0;
+}
+
+.card figcaption {
+  padding: 4px 15px;
+}
+
+.card p:empty {
+  display: none;
+}
+
+.card-info {
+  justify-content: flex-end;
+}
+
+.wish {
+  margin: 30px auto;
+  font: 15px/1.3em sans-serif;
+}
+
+.wish small {
+  font: .8em sans-serif;
+}
+
+.amp-section-header {
+  font-weight: bold;
+  color: #777;
+  margin-bottom: -15px;
+  margin-top: 45px;
+}

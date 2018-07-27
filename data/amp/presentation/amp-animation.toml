@@ -1,0 +1,7 @@
+name = "<amp-animation>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-animation"
+summary = '''
+I really didn't like Polymer's implementation of animation and this is basically a copy of that concept. The Polymer team eventually bailed on the whole idea and told devs to just use a JS/CSS one-two-punch combo, but AMP is stuck with this. It can do several things, but one of the cooler ones is to trigger an animation when an element hits the viewport. 
+
+For each animation we want to try to do I'll check against this documentation.
+'''

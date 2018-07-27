@@ -1,0 +1,7 @@
+name = "<amp-bind>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-bind"
+summary = '''
+
+This component is the backbone of interaction in AMP pages. AMP doesn't allow developers to use javascript as a method to interact with the page directly, but using `<amp-bind>` we can still perform some basic tasks like doing something on a click.
+
+'''

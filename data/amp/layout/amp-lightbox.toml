@@ -1,0 +1,7 @@
+name = "<amp-lightbox>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-lightbox"
+summary = '''
+
+A basic lightbox for any content. If we want to use this, I should spend some time figuring out what we can style. There is also an `<amp-image-lightbox>` and an `<amp-lightbox-gallery>` component for more specific use cases.
+
+'''

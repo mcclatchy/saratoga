@@ -1,0 +1,6 @@
+{{ define "main" }}
+<h1><code>&lt;{{ .Title }}&gt;</code></h1>
+<h4>{{ .Params.tags }}</h4>
+{{ .Content }}
+<p><a class="ghost" href="{{ .Param "spec" }}">Go to the reference page</a></p>
+{{ end }}

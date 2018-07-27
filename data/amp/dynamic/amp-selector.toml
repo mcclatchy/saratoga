@@ -1,0 +1,9 @@
+name = "<amp-selector>"
+spec = "https://www.ampproject.org/docs/reference/components/amp-selector"
+summary = '''
+
+A control that allows actively selected state in a list of children. This is very similar to the <iron-selector> component in the Polymer project if you're familiar with that. All it does is keep track of what child has been selected and provides a visual class to show the user what they have selected. Pretty boring on its own.
+
+Couple this with data binding allowed in AMP, and you can do some fun things. Take a gallery using `<amp-carousel>` for example. If we add a thumbnail strip underneath declared with `<amp-selector>`, when a user clicks a thumbnail the component fires an event that the carousel can use to show the corresponding image.
+
+'''

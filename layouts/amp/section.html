@@ -1,0 +1,58 @@
+{{ define "content" }}
+  <h1>AMP components</h1>
+
+  <p>AMP pages at the core are just web pages with some components and restrictions that are intended to make the web faster and pages more portable. Pages do have the restriction of 50K of CSS, but AMP doesn't dictate what we can do with that 50K. Since AMP pages are only sent to mobile devices, we actually have better support of newer native technologies. There is also no restriction on HTML except for a couple of elements, so most of the design for the new story pages can be done here as well.</p>
+  <p>For the custom elements that are shipped with AMP, there is a concept called <a href="https://www.ampproject.org/docs/design/responsive/control_layout">layout</a> that is worth learning. In several cases it is required, or different options require different attributes be set. The purpose is to be able to determine the height of elements like images and ads before the content loads, preventing content from jumping around. It's quirky, to say the least, but we're stuck with it.</p>
+
+  <h2>Current media components converted by Relay Media</h2>
+  <p>For each of these components, Relay Media is ingesting the raw HTML pasted into the system and converting it using regular expressions or something similar to it. We will need to produce similar code to keep our AMP pages valid.</p>
+
+  <div class="panel">
+    <div class="grid">
+      {{ range .Site.Taxonomies.tags.media }}
+       {{ .Render "summary" }}
+      {{ end }}
+    </div>
+    <div class="grid social">
+      {{ range .Site.Taxonomies.tags.social }}
+       {{ .Render "summary" }}
+      {{ end }}
+    </div>
+  </div>
+
+  <h2>Additional components not supported by Relay Media</h2>
+  <p>The list of components that we might potentially use is very long and recreating each one here would be overkill. I highly recommend all departments at least skimm the functionaity of every component on <a href="https://www.ampproject.org/docs/reference/components">ampproject.org</a>. I'm including a list of those I think might help us the most. If anyone would like to see a component in action I will make a sample here for us to investigate.</p>
+
+  <h3 class="amp-section-header">Dynamic content</h3>
+  {{ range .Site.Data.amp.dynamic }}
+  {{ partial "amp-wishlist" . }}
+  {{ end }}
+
+  <h3 class="amp-section-header">Layout</h3>
+  {{ range .Site.Data.amp.layout }}
+  {{ partial "amp-wishlist" . }}
+  {{ end }}
+
+  <h3 class="amp-section-header">Presentation</h3>
+  {{ range .Site.Data.amp.presentation }}
+  {{ partial "amp-wishlist" . }}
+  {{ end }}
+
+  <h3 class="amp-section-header">Social</h3>
+  {{ range .Site.Data.amp.social }}
+  {{ partial "amp-wishlist" . }}
+  {{ end }}
+
+
+{{ end }}
+
+{{ define "head" }}
+<link rel="stylesheet" href="/css/amp-demo.css">
+
+<script async custom-element="amp-brightcove" src="https://cdn.ampproject.org/v0/amp-brightcove-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+<script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+{{ end }}
