@@ -34,7 +34,7 @@ pre {
   font-size: 14px;
 }
 
-.main code {
+.main :not(pre) code {
   display: inline-block;
   background-color: antiquewhite;
   padding: 2px 4px;

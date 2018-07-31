@@ -62,6 +62,7 @@ figure img {
 figcaption {
   font: 12px/1.2em "McClatchy Sans";
   color: #757575;
+  margin-top: 5px;
 }
 
 form > * + * {

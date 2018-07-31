@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/organisms.css">
 
     
+<link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/amp-demo.css">
+
+<script async custom-element="amp-brightcove" src="https://cdn.ampproject.org/v0/amp-brightcove-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+<script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
   </head>
 
   <body page="page">
@@ -49,6 +58,34 @@
 
     <div class="main amp">
       
+<h3>&lt;amp-brightcove&gt;</h3>
+<figure>
+  <amp-brightcove
+    data-url="https://www.kansascity.com/news/local/article214804870.html"
+    data-account="5502557046001"
+    data-key="BCpkADawqM1lDGV6T5I5sBzceCTft1iD58oboWLx2ae7B4uS6OPlWNB6lYMuwL4VclR43ZaBEDuItG0o0U5Bgdfc4oFvvAITPpbRoLVF7N_uSvmFQX3FUKgt-DXsp9DHNfTQrQfb9iDsZR_S"
+    data-video-id="5808681571001"
+    layout="responsive"
+    width="16" height="9"></amp-brightcove>
+  <figcaption>Amethyst Place at 2735A Troost Ave. provides recovery housing for women and their children.</figcaption>
+</figure>
+
+<p></p>
+
+<p>Larger vendors have AMP components that they have submitted to Google. Brightcove has one and it is the current method Relay Media uses to display our video. The responsive layout is the best option for this as well, and the width and height can be set to the ratio of 16 and 9 respectivly.</p>
+
+<p><strong>GOTCHA:</strong> This component requires a video player id that exists in Brightcove&rsquo;s toolset. We cannot use our player code with this approach.</p>
+
+<pre><code>&lt;amp-brightcove
+  data-url=&quot;https://www.kansascity.com/news/local/article214804870.html&quot;
+  data-account=&quot;5502557046001&quot;
+  data-key=&quot;BCpkADawqM1lDGV6T5I5sBzceCTft1iD58oboWLx2ae7B4uS6OPlWNB6lYMuwL4VclR43ZaBEDuItG0o0U5Bgdfc4oFvvAITPpbRoLVF7N_uSvmFQX3FUKgt-DXsp9DHNfTQrQfb9iDsZR_S&quot;
+  data-video-id=&quot;5808681571001&quot;
+  layout=&quot;responsive&quot;
+  width=&quot;16&quot; height=&quot;9&quot;&gt;&lt;/amp-brightcove&gt;
+</code></pre>
+<p><a class="ghost" href="https://www.ampproject.org/docs/reference/components/amp-brightcove">Go to the reference page</a></p>
+
     </div>
 
     <footer>

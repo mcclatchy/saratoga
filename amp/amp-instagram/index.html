@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/organisms.css">
 
     
+<link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/amp-demo.css">
+
+<script async custom-element="amp-brightcove" src="https://cdn.ampproject.org/v0/amp-brightcove-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+<script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
   </head>
 
   <body page="page">
@@ -49,6 +58,27 @@
 
     <div class="main amp">
       
+<h3>&lt;amp-instagram&gt;</h3>
+<figure>
+  <amp-instagram 
+    width="1" height="1" 
+    layout="responsive" 
+    data-shortcode="BLPLpPoBW_i"></amp-instagram>
+</figure>
+
+<p></p>
+
+<p>The width/height combo in Relay&rsquo;s code is an example of something they do with other components like video. The two attributes end up defining the ratio of the element on the page, so if we know the element will always produce a square 1 and 1 are fine values.</p>
+
+<p>Now, having said that, this approach doesn&rsquo;t make any sense to me because the <code>&lt;amp-instagram&gt;</code> element isn&rsquo;t square in the end.</p>
+
+<pre><code>&lt;amp-instagram 
+  width=&quot;1&quot; height=&quot;1&quot; 
+  layout=&quot;responsive&quot; 
+  data-shortcode=&quot;BLPLpPoBW_i&quot;&gt;&lt;/amp-instagram&gt;
+</code></pre>
+<p><a class="ghost" href="https://www.ampproject.org/docs/reference/components/amp-instagram.html">Go to the reference page</a></p>
+
     </div>
 
     <footer>

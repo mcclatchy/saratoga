@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/organisms.css">
 
     
+<link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/amp-demo.css">
+
+<script async custom-element="amp-brightcove" src="https://cdn.ampproject.org/v0/amp-brightcove-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+<script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
   </head>
 
   <body page="page">
@@ -49,6 +58,27 @@
 
     <div class="main amp">
       
+<h3>&lt;amp-twitter&gt;</h3>
+<figure>
+  <amp-twitter width="390" height="300" layout="responsive" data-tweetid="1021653510318948352"><blockquote class="twitter-tweet" data-lang="en" placeholder=""><p>I&#x2019;m still here y&#x2019;all  <a href="https://t.co/gb6cmaVv6H">https://t.co/gb6cmaVv6H</a></p>&#x2014; Sam I Am (@SamCunliffe_3) <a href="https://twitter.com/SamCunliffe_3/status/1021653510318948352?ref_src=twsrc%5Etfw">July 24, 2018</a></blockquote></amp-twitter>
+</figure>
+
+<p></p>
+
+<p>Twitter has it&rsquo;s own component. Relay is adding the blockquote placeholder, but it&rsquo;s not required.</p>
+
+<pre><code>&lt;amp-twitter 
+  width=&quot;390&quot; height=&quot;300&quot; 
+  layout=&quot;responsive&quot; 
+  data-tweetid=&quot;1021653510318948352&quot;&gt;
+  &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot; placeholder=&quot;&quot;&gt;
+    &lt;p&gt;I&amp;#x2019;m still here y&amp;#x2019;all  &lt;a href=&quot;https://t.co/gb6cmaVv6H&quot;&gt;https://t.co/gb6cmaVv6H&lt;/a&gt;&lt;/p&gt;
+    &amp;#x2014; Sam I Am (@SamCunliffe_3) &lt;a href=&quot;https://twitter.com/SamCunliffe_3/status/1021653510318948352?ref_src=twsrc%5Etfw&quot;&gt;July 24, 2018&lt;/a&gt;
+  &lt;/blockquote&gt;
+&lt;/amp-twitter&gt;
+</code></pre>
+<p><a class="ghost" href="https://www.ampproject.org/docs/reference/components/amp-twitter.html">Go to the reference page</a></p>
+
     </div>
 
     <footer>

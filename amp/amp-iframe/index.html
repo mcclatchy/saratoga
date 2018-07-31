@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/organisms.css">
 
     
+<link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/amp-demo.css">
+
+<script async custom-element="amp-brightcove" src="https://cdn.ampproject.org/v0/amp-brightcove-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+<script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
   </head>
 
   <body page="page">
@@ -49,6 +58,42 @@
 
     <div class="main amp">
       
+<h3>&lt;amp-iframe&gt;</h3>
+<figure>
+  <amp-iframe 
+    resizable="" 
+    layout="responsive" 
+    src="https://cdnapisec.kaltura.com/p/591531/sp/59153100/embedIframeJs/uiconf_id/6740162/partner_id/591531?iframeembed=true&amp;playerId=kaltura-player-9999999999-37170514248377304&amp;entry_id=0_xfrlx29b" 
+    width="16" height="9" 
+    frameborder="0" 
+    allowfullscreen 
+    sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation" 
+    data-block-on-consent="">
+    <span placeholder=""></span>
+    <span overflow="">More</span>
+  </amp-iframe>
+  <figcaption></figcaption>
+</figure>
+
+<p></p>
+
+<p>The <code>&lt;amp-iframe&gt;</code> component is the generic catch-all for everything external that doesn&rsquo;t have its own component. I highly recommend reading the reference page, because there are attribute requirements that Relay Media is adding and aren&rsquo;t typically included with most embeddable snippets.</p>
+
+<pre><code>&lt;amp-iframe 
+  resizable=&quot;&quot; 
+  layout=&quot;responsive&quot; 
+  src=&quot;https://cdnapisec.kaltura.com/p/591531/sp/59153100/embedIframeJs/uiconf_id/6740162/partner_id/591531?iframeembed=true&amp;amp;playerId=kaltura-player-9999999999-37170514248377304&amp;amp;entry_id=0_xfrlx29b&quot; 
+  width=&quot;560&quot; height=&quot;395&quot; 
+  frameborder=&quot;0&quot; 
+  allowfullscreen 
+  sandbox=&quot;allow-scripts allow-same-origin allow-popups allow-top-navigation&quot; 
+  data-block-on-consent=&quot;&quot;&gt;
+  &lt;span placeholder=&quot;&quot;&gt;&lt;/span&gt;
+  &lt;span overflow=&quot;&quot;&gt;More&lt;/span&gt;
+&lt;/amp-iframe&gt;
+</code></pre>
+<p><a class="ghost" href="https://www.ampproject.org/docs/reference/components/amp-iframe">Go to the reference page</a></p>
+
     </div>
 
     <footer>

@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/organisms.css">
 
     
+<link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/css/amp-demo.css">
+
+<script async custom-element="amp-brightcove" src="https://cdn.ampproject.org/v0/amp-brightcove-0.1.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+<script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+<script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
   </head>
 
   <body page="page">
@@ -49,6 +58,36 @@
 
     <div class="main amp">
       
+<h3>&lt;amp-img&gt;</h3>
+<figure>
+  <amp-img
+    src="http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_640/AMETHYST%2020180712%20KAM%20238F"
+    srcset="
+    http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_480/AMETHYST%2020180712%20KAM%20238F 480w,
+    http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_640/AMETHYST%2020180712%20KAM%20238F 640w,
+    http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_960/AMETHYST%2020180712%20KAM%20238F 960w,
+    http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_1140/AMETHYST%2020180712%20KAM%20238F 1140w"
+    layout="responsive"
+    width="640" height="359"></amp-img>
+  <figcaption>Seven-year-old Athenia Smith rides her bike around the central courtyard at Amethyst Place, 2735A Troost Ave. She and her mother have lived for two months at Amethyst Place, which provides recovery housing for women and their children. | Keith Myers kmyers@kcstar.com</figcaption>
+</figure>
+
+<p></p>
+
+<p>This component is a straight swap for the <code>&lt;img&gt;</code> tag, and is the only valid way to show an image on an AMP page. The responsive layout is standard for this component, so both the width and the height are generally required.</p>
+
+<pre><code>&lt;amp-img
+  src=&quot;http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_640/AMETHYST%2020180712%20KAM%20238F&quot;
+  srcset=&quot;
+  http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_480/AMETHYST%2020180712%20KAM%20238F 480w,
+  http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_640/AMETHYST%2020180712%20KAM%20238F 640w,
+  http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_960/AMETHYST%2020180712%20KAM%20238F 960w,
+  http://www.kansascity.com/latest-news/ounp20/picture215018250/alternates/LANDSCAPE_1140/AMETHYST%2020180712%20KAM%20238F 1140w&quot;
+  layout=&quot;responsive&quot;
+  width=&quot;640&quot; height=&quot;359&quot;&gt;&lt;/amp-img&gt;
+</code></pre>
+<p><a class="ghost" href="https://www.ampproject.org/docs/reference/components/amp-img">Go to the reference page</a></p>
+
     </div>
 
     <footer>
