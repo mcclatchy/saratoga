@@ -49,7 +49,7 @@ class SeriesGridVertical extends SeriesGrid {
       }
     </style>
 
-    <link rel="stylesheet" href="http://localhost:1313/components/saratoga.css">
+    <link rel="stylesheet" href="https://mcclatchy.github.io/saratoga/landing-page/components/saratoga.css">
     <slot name="intro">
       <h2 class="default-header">More from this series</h2>
     </slot>
