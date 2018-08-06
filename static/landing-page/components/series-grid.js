@@ -130,7 +130,7 @@ class SeriesGrid extends HTMLElement {
       stories.forEach(story => {
         template.innerHTML = this.constructor.articleHTML(story);
         grid.appendChild(template.content.cloneNode(true));
-        console.log(story);
+        // console.log(story);
       })
     }
   }
