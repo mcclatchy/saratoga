@@ -1,0 +1,2 @@
+fight-club.json:
+	mapi -publication miamiherald 177883676 177946531 177889736 177884026 177885221 177886506 177884886 > fight-club.json

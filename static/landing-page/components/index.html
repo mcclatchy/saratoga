@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <script src="series-grid.js"></script>
+  </head>
+
+  <body>
+    <h1>This is a test</h1>
+
+    <series-grid href="fight-club.json">
+      <h1 slot="intro-text">Fight Club</h1>
+    </series-grid>
+  </body>
+</html>
+
+<script>
+  class SeriesGridTwo extends SeriesGrid {
+    static get template() {
+      let t = document.createElement("template");
+      t.innerHTML = `<h1>Something totally new</h1>`
+      return t;
+    }
+
+    constructor() {
+      super();
+    }
+  }
+
+  customElements.define("series-grid-two", SeriesGridTwo);
+</script>
