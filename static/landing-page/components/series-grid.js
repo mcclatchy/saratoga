@@ -4,11 +4,12 @@ class SeriesGrid extends HTMLElement {
    */
 
   get href() {
-    return this.getAttribute("href")
+    return this.getAttribute("href");
   }
 
   set href(url) {
-    this.setAttribute("href", url)
+    this.setAttribute("href", url);
+    this.render();
   }
 
   static baseHTML() {
@@ -118,6 +119,9 @@ class SeriesGrid extends HTMLElement {
   async render() {
     let template = document.createElement('template');
     let grid = this.shadowRoot.querySelector(".series-grid");
+
+    // Reset the grid
+    grid.innerHTML = "";
 
     if(SeriesGrid.isValidURL(this.href)) {
       let response = await fetch(this.href);
