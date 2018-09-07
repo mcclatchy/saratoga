@@ -1,0 +1,6 @@
+{{ with ._links.lead_media }}
+{{ if matchRe "/v1/images/" .href }}
+  {{ partial "templates/amp/amp-img.tmpl" .asset }}
+{{ else if matchRe "/v1/videos/" .href }}
+  {{ partial "templates/amp/amp-brightcove.tmpl" .asset }}
+{{ end }}{{ end }}

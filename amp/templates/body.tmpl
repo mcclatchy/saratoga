@@ -1,0 +1,34 @@
+{{ $scratch := scratch }}
+{{ $scratch.Set "code" "" }}
+{{ $scratch.Set "body" (.body | replaceRe "^<div xmlns.*?>" "" | replaceRe "</div>$" "") }}
+
+{{ range ._embedded.inline }}
+{{ $injectionPoint := printf "<!-- %%asset:%.f%% -->" .id }}
+
+{{ with ._links.self.asset }}
+
+  {{ if .brightcove_id }}
+  {{ $scratch.Set "code" (partial "templates/amp/amp-brightcove.tmpl" .) }}
+
+  {{ else if (matchRe "facebook.com" .embed_code) }}
+  {{ $scratch.Set "code" (partial "templates/amp/amp-facebook.tmpl" .embed_code) }}
+
+  {{ else if (matchRe "twitter.com" .embed_code) }}
+  {{ $scratch.Set "code" (partial "templates/amp/amp-twitter.tmpl" .embed_code) }}
+
+  {{ else if (matchRe "instagram.com" .embed_code) }}
+  {{ $scratch.Set "code" (partial "templates/amp/amp-instagram.tmpl" .embed_code) }}
+
+  {{ else if (matchRe "youtube.com" .embed_code) }}
+  {{ $scratch.Set "code" (partial "templates/amp/amp-youtube.tmpl" .embed_code) }}
+
+  {{ else if (matchRe "soundcloud.com" .embed_code) }}
+  {{ $scratch.Set "code" (partial "templates/amp/amp-soundcloud.tmpl" .embed_code) }}
+
+  {{ end }}
+{{ end }}
+  
+{{ $scratch.Set "body" (replaceRe $injectionPoint ($scratch.Get "code") ($scratch.Get "body")) }}
+{{ end }} 
+
+{{ $scratch.Get "body" }}

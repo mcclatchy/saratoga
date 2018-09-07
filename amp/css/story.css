@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "McClatchy Serif";
+  src: url("https://www.kansascity.com/wps/source/fonts/mcclatchy-serif/McClatchySerif-Regular.woff");
+}
+
+@font-face {
+  font-family: "McClatchy Sans";
+  src: url("https://www.kansascity.com/wps/source/fonts/mcclatchy-sans/McClatchySans-Regular.woff");
+}
+
+@font-face {
+  font-family: "Lyon";
+  src: url("https://www.kansascity.com/wps/source/fonts/lyon/LyonTextWeb-Regular.woff");
+}
+
+/**
+ * Story container
+ */
+
+.story > * {
+  width: 100%;
+  max-width: var(--story-max-width);
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+  margin: var(--spacing) auto;
+  box-sizing: border-box;
+}
+
+.story > :first-child {
+  margin-top: 0;
+}
+
+.story > :last-child {
+  margin-bottom: 0;
+}
+
+.story > figure {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: var(--spacing) 0;
+}
+
+.story > p:empty {
+  display: none;
+}
+
+.story > h2, .story > h3, .story > h4, .story > h5, .story > h6 {
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.story p a {
+	text-decoration: underline;
+}
+
+/**
+ * Article Header
+ */
+
+.page-header {
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-header > * {
+  padding: var(--spacing);
+  margin: 0;
+  justify-content: center;
+}
+
+.pubinfo > * {
+  margin-top: 10px;
+}
+
+.author {
+  font: 600 11px "McClatchy Sans";
+  color: #757575;
+}
+
+.credit {
+  font-weight: 400;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.social-media > a {
+  padding: var(--spacing);
+	line-height: 0;
+}
+
+.social-media svg {
+  width: 20px;
+  height: 20px;
+}
+
+/**
+ * Ads
+ */
+
+.ad {
+	margin: 50px;
+}
+
+.ad[type=teads] {
+	padding: 0;
+}
+
+.ad[type=doubleclick] {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/**
+ * Related stories
+ */
+
+.related-stories {
+  margin-top: 50px;
+}
+
+.related-stories > h5 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.related-stories .card-info {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 450px;
+}
+
+.related-stories .card-info:first-child {
+  margin-top: 10px;
+}
+
+/**
+ * Author Card
+ * This one is probably a molecule unless it's only
+ * delivered to the story page and you want to
+ * keep things as optimized as possible.
+ */
+
+.author-card {
+	padding: 0 var(--spacing);
+  margin-top: 50px;
+}
+
+.author-card .top-row {
+	display: flex;
+	align-items: center;
+}
+
+.author-thumbnail {
+	border-radius: 50%;
+}
+
+.author-name {
+	flex: 1;
+	padding: var(--spacing);
+	margin: 0;
+	color: #989898;
+	text-decoration: underline;
+}
+
+.author-links {
+	display: flex;
+}
+
+.author-links > a {
+  padding: var(--spacing);
+	line-height: 0;
+}
+
+.author-links > :last-child {
+	padding-right: 0;
+}
+
+.author-links svg {
+	width: 20px;
+  height: 20px;
+}
+
+.author-card p {
+	font: 14px/20px "McClatchy Sans", sans-serif;
+}
+
+/**
+ * I need to confirm this is part of author card 
+ */
+
+.subscription-callout {
+	padding-left: 0;
+	padding-right: 0;
+	border-top: 1px solid #dfdfdf;
+}
+
+.subscription-callout h4 {
+	font: 14px/20px "McClatchy Sans", sans-serif;
+	color: #0066B3;
+}
+
+/**
+ * Zergnet
+ */
+
+.zergnet {
+  margin-top: 50px;
+}
+
+/**
+ * Section
+ */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section > * {
+  margin-top: 50px;
+  max-width: var(--story-max-width);
+}
+
+.paper + .more-link {
+  padding-left: var(--spacing);
+}
+
+/**
+ * More from section
+ */
+
+.from-section {
+  margin-bottom: calc(var(--spacing) * 2)
+}
+
+.group-label {
+  margin: var(--spacing);
+  font-weight: 700;
+}
+
+.from-section figcaption {
+  display: none;
+}
+
+/**
+ * Grid
+ */
+
+@supports(display: grid) {
+  @media (min-width: 768px) {
+    .grid {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      align-items: normal;
+      grid-gap: calc(var(--spacing) * 2);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .section {
+      grid-row-gap: 50px;
+      padding: 50px var(--spacing);
+    }
+
+    .section > * {
+      margin: 0;
+      max-width: initial;
+    }
+
+    [data-feed=readNext] {
+      grid-column: span 2;
+    }
+
+    [data-feed=moreInSection] {
+      grid-column: span 3;
+    }
+
+    .from-section {
+      margin-bottom: 0;
+    }
+  }
+}

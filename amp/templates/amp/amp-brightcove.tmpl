@@ -1,0 +1,19 @@
+{{ $scratch := scratch }}
+{{ $src := index .file_sources 0 }}
+
+{{ $scratch.Set "pubid" "5502557046001" }}
+{{ $subPub := findSubRe "pubid=([0-9]+)" $src.url }}
+
+{{ if eq (len $subPub) 2 }}
+{{ $scratch.Set "pubid" (index $subPub 1) }}
+{{ end }}
+
+<figure>
+  <amp-brightcove
+    layout="responsive"
+    width="16"
+    height="9"
+    data-video-id="{{ .brightcove_id }}"
+    data-account="{{ $scratch.Get "pubid" }}"></amp-brightcove>
+  <figcaption>{{ .description }}</figcaption>
+</figure>

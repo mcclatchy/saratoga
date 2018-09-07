@@ -1,0 +1,7 @@
+<time class="published-date" datetime="{{ .published_date }}">
+  {{ dateFormat .published_date "2006-01-02T15:04:05Z" "Jan 2, 2006" }}
+  {{ if ne .published_date .modified_date }}
+  , UPDATED {{ dateFormat .modified_date "2006-01-02T15:04:05Z" "humanize" }}
+  {{ end }}
+</time>
+

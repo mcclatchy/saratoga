@@ -1,0 +1,7 @@
+{{ $shortcode := findSubRe "www.instagram.com/p/(.*?)/" . }}
+
+<amp-instagram 
+  width="1" height="1" 
+  layout="responsive" 
+  data-captioned
+  data-shortcode="{{ index $shortcode 1 }}"></amp-instagram>

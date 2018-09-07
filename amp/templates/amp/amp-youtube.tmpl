@@ -1,0 +1,9 @@
+{{ $width := findSubRe "width=\"([0-9]+)\"" . }}
+{{ $height := findSubRe "height=\"([0-9]+)\"" . }}
+{{ $videoid := findSubRe "/embed/(.*)?\"" . }}
+
+<amp-youtube 
+  width="{{ index $width 1 }}"
+  height="{{ index $height 1 }}"
+  layout="responsive"
+  data-videoid="{{ index $videoid 1 }}"></amp-youtube>

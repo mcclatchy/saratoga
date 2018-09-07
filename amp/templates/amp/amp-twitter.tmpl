@@ -1,0 +1,7 @@
+{{ $tweetid := findSubRe "/status/([0-9]+)" . }}
+
+<amp-twitter 
+  width="375" 
+  height="475" 
+  layout="responsive" 
+  data-tweetid="{{ index $tweetid 1 }}"></amp-twitter>

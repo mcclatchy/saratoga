@@ -1,0 +1,9 @@
+{{ $href := findSubRe "href=(.*)?&" . }}
+{{ $width := findSubRe "width=\"([0-9]+)\"" . }}
+{{ $height := findSubRe "height=\"([0-9]+)\"" . }}
+
+<amp-facebook 
+  width="{{ index $width 1 }}" 
+  height="{{ index $height 1 }}" 
+  layout="responsive" 
+  data-href="{{ unescape (index $href 1) }}"></amp-facebook>

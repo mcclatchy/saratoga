@@ -1,0 +1,136 @@
+/**
+ * Masthead
+ */
+
+:root {
+  --masthead-height: 55px;
+  --masthead-spacing: 5px var(--spacing);
+}
+
+.masthead {
+  height: var(--masthead-height);
+  padding: var(--masthead-spacing);
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.masthead > * {
+  flex: 1;
+}
+
+.masthead .left {
+  display: flex;
+}
+
+.masthead .left > *, .masthead .menu a {
+  display: flex;
+  align-items: center;
+}
+
+.masthead .left > :nth-child(n+2) {
+  padding-left: var(--spacing);
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  font: 500 14px/18px "McClatchy Sans", Arial;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-label {
+  height: 14px;
+  margin-left: 10px;
+}
+
+.masthead .ereader-button, .masthead .weather-button, .masthead .menu-label {
+  display: none;
+}
+
+.masthead .ereader-button {
+  position: relative;
+  top: 4px;
+}
+
+.masthead > .middle {
+  padding: 0 var(--spacing);
+  flex: 2;
+  box-sizing: content-box;
+}
+
+.logo {
+  max-height: 38px;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .masthead .ereader-button, .masthead .weather-button, .masthead .menu-label {
+    display: block;
+  }
+
+  .logo {
+    max-width: 400px;
+  }
+
+  .mh-hide-sm {
+    display: initial;
+  }
+}
+
+@media (min-width: 1140px) {
+  .logo {
+    max-width: 450px;
+  }
+}
+
+/**
+ * Main Nav
+ */
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 260px;
+  background-color: #373737;
+}
+
+.main-nav .state-toggle {
+  height: var(--masthead-height);
+  padding: var(--masthead-spacing);
+  display: flex;
+  align-items: center;
+}
+
+.main-nav .menu-button {
+  box-sizing: content-box;
+  height: var(--masthead-height);
+  padding: var(--masthead-spacing);
+  color: white;
+  fill: white;
+}
+
+.main-nav a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 500 14px/1.5em "McClatchy Sans", Arial;
+  color: white;
+  padding: var(--spacing);
+  padding-left: calc((var(--spacing) * 2) - 6px);
+  border-left: 6px solid transparent;
+  opacity: 0.6;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+  border-color: #0066b3;
+  background-color: rgba(34,34,34,0.5);
+}

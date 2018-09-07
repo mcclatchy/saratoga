@@ -1,0 +1,6 @@
+{{ $id := findSubRe "tracks/([0-9]+)" . }}
+
+<amp-soundcloud
+  height="166"
+  layout="fixed-height"
+  data-trackid="{{ index $id 1 }}"></amp-soundcloud>
