@@ -103,15 +103,12 @@
  * Ads
  */
 
-.ad {
-	margin: 50px;
+.story amp-ad {
+	margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.ad[type=teads] {
-	padding: 0;
-}
-
-.ad[type=doubleclick] {
+amp-ad[type=doubleclick] {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -244,6 +241,7 @@
 
 .group-label {
   margin: var(--spacing);
+  margin-top: 0;
   font-weight: 700;
 }
 
@@ -281,7 +279,7 @@
     }
 
     [data-feed=moreInSection] {
-      grid-column: span 3;
+      grid-column: span 2;
     }
 
     .from-section {

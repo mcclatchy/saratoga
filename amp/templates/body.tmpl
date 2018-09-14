@@ -1,9 +1,9 @@
 {{ $scratch := scratch }}
 {{ $scratch.Set "code" "" }}
-{{ $scratch.Set "body" (.body | replaceRe "^<div xmlns.*?>" "" | replaceRe "</div>$" "") }}
+{{ $scratch.Set "body" (.body | replaceRe "^<div xmlns.*?>" "" | replaceRe "</div>$" "" | replaceRe "<p dir=\"ltr\">" "<p>") }}
 
 {{ range ._embedded.inline }}
-{{ $injectionPoint := printf "<!-- %%asset:%.f%% -->" .id }}
+{{ $injectionPoint := printf "<p>[[:space:]]*<!-- %%asset:%.f%% -->[[:space:]]*</p>" .id }}
 
 {{ with ._links.self.asset }}
 

@@ -4,19 +4,19 @@ PAGES := dist/index.html dist/facebook.html dist/twitter.html dist/instagram.htm
 all: $(PAGES)
 
 dist/index.html: data/brightcove.json
-	loopit -data $< -out $@ -watch templates/*.tmpl
+	loopit -data $< -out $@ -shim templates/*.tmpl
 
 dist/facebook.html: data/facebook.json
-	loopit -data $< -out $@ templates/*.tmpl
+	loopit -data $< -out $@ -shim templates/*.tmpl
 
 dist/twitter.html: data/twitter.json
-	loopit -data $< -out $@ templates/*.tmpl
+	loopit -data $< -out $@ -shim templates/*.tmpl
 
 dist/instagram.html: data/instagram.json
-	loopit -data $< -out $@ templates/*.tmpl
+	loopit -data $< -out $@ -shim templates/*.tmpl
 
 dist/youtube.html: data/youtube.json
-	loopit -data $< -out $@ templates/*.tmpl
+	loopit -data $< -out $@ -shim templates/*.tmpl
 
 #
 # Aggregates
@@ -82,4 +82,5 @@ clean:
 	rm -rf dist/*.html
 
 public:
-	cp -r dist ../static/amp/designs
+	cp -r dist/* ../static/amp/designs/
+	cd .. && hugo
