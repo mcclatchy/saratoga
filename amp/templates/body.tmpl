@@ -3,27 +3,33 @@
 {{ $scratch.Set "body" (.body | replaceRe "^<div xmlns.*?>" "" | replaceRe "</div>$" "" | replaceRe "<p dir=\"ltr\">" "<p>") }}
 
 {{ range ._embedded.inline }}
-{{ $injectionPoint := printf "<p>[[:space:]]*<!-- %%asset:%.f%% -->[[:space:]]*</p>" .id }}
+{{ $injectionPoint := printf "<p>[[:space:]]*<!-- %%asset:%.f(.*)?%% -->[[:space:]]*</p>" .id }}
 
 {{ with ._links.self.asset }}
-
   {{ if .brightcove_id }}
   {{ $scratch.Set "code" (partial "templates/amp/amp-brightcove.tmpl" .) }}
 
-  {{ else if (matchRe "facebook.com" .embed_code) }}
-  {{ $scratch.Set "code" (partial "templates/amp/amp-facebook.tmpl" .embed_code) }}
+  {{ else if .file_url }}
+  {{ $scratch.Set "code" (partial "templates/amp/amp-img.tmpl" .) }}
 
-  {{ else if (matchRe "twitter.com" .embed_code) }}
-  {{ $scratch.Set "code" (partial "templates/amp/amp-twitter.tmpl" .embed_code) }}
+  {{ else }}
+  {{ with .embed_code }}
+    {{ if (matchRe "facebook.com" .) }}
+    {{ $scratch.Set "code" (partial "templates/amp/amp-facebook.tmpl" .) }}
 
-  {{ else if (matchRe "instagram.com" .embed_code) }}
-  {{ $scratch.Set "code" (partial "templates/amp/amp-instagram.tmpl" .embed_code) }}
+    {{ else if (matchRe "twitter.com" .) }}
+    {{ $scratch.Set "code" (partial "templates/amp/amp-twitter.tmpl" .) }}
 
-  {{ else if (matchRe "youtube.com" .embed_code) }}
-  {{ $scratch.Set "code" (partial "templates/amp/amp-youtube.tmpl" .embed_code) }}
+    {{ else if (matchRe "instagram.com" .) }}
+    {{ $scratch.Set "code" (partial "templates/amp/amp-instagram.tmpl" .) }}
 
-  {{ else if (matchRe "soundcloud.com" .embed_code) }}
-  {{ $scratch.Set "code" (partial "templates/amp/amp-soundcloud.tmpl" .embed_code) }}
+    {{ else if (matchRe "youtube.com" .) }}
+    {{ $scratch.Set "code" (partial "templates/amp/amp-youtube.tmpl" .) }}
+
+    {{ else if (matchRe "soundcloud.com" .) }}
+    {{ $scratch.Set "code" (partial "templates/amp/amp-soundcloud.tmpl" .) }}
+    {{ end }}
+  {{ end }}
 
   {{ end }}
 {{ end }}
