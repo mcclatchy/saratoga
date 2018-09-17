@@ -1,6 +1,6 @@
 {{ $width := findSubRe "width=\"([0-9]+)\"" . }}
 {{ $height := findSubRe "height=\"([0-9]+)\"" . }}
-{{ $videoid := findSubRe "/embed/(.*)?\"" . }}
+{{ $videoid := findSubRe "/embed/(.*?)\"" . }}
 
 <amp-youtube 
   width="{{ index $width 1 }}"

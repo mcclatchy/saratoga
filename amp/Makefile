@@ -1,5 +1,4 @@
 PAGES := dist/index.html dist/facebook.html dist/twitter.html dist/instagram.html dist/youtube.html dist/image.html
-
 all: clean $(PAGES)
 
 #
