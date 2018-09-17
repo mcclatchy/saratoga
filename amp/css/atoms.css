@@ -73,8 +73,8 @@ figure img {
 figcaption {
   font: 12px/1.4em "McClatchy Sans", sans-serif;
   color: #757575;
-  margin-top: 5px;
-  padding: 5px var(--spacing) 0;
+  padding: 10px var(--spacing) 0;
+  max-width: 620px;
 }
 
 form > * + * {

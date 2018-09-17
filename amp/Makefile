@@ -63,6 +63,6 @@ data/sports.json:
 clean:
 	rm -rf dist/*.html
 
-public:
+public: all
 	cp -r dist/* ../static/amp/designs/
 	cd .. && hugo
