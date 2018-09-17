@@ -80,61 +80,61 @@
             {
               "height": 0,
               "mime_type": "application/x-mpegURL",
-              "url": "http://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGQ5ZDlfNTlkMzA1ZGIxOTk0ZTM3MTc0NGRiZDJkNzM0OWZmOGNmYWMxOTIzZmVjYWE4MDA2YTZkZmI0ZDBjNTg1ZDAzMg%3D%3D&pubid=5502557046001",
+              "url": "http://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGY5MTRfZDBjMWY2YzY5NzIzNWE3ZDY1MmM0Y2UxM2RjZmYyOGE1ODVmMzU1ZDczMGU0Nzc5MTFlOWEwNDY0ZDAwM2IxYw%3D%3D&pubid=5502557046001",
               "width": 0
             },
             {
               "height": 0,
               "mime_type": "application/x-mpegURL",
-              "url": "https://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGQ5ZDlfNTlkMzA1ZGIxOTk0ZTM3MTc0NGRiZDJkNzM0OWZmOGNmYWMxOTIzZmVjYWE4MDA2YTZkZmI0ZDBjNTg1ZDAzMg%3D%3D&pubid=5502557046001",
+              "url": "https://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGY5MTRfZDBjMWY2YzY5NzIzNWE3ZDY1MmM0Y2UxM2RjZmYyOGE1ODVmMzU1ZDczMGU0Nzc5MTFlOWEwNDY0ZDAwM2IxYw%3D%3D&pubid=5502557046001",
               "width": 0
             },
             {
               "height": 0,
               "mime_type": "application/x-mpegURL",
-              "url": "http://manifest.prod.boltdns.net/manifest/v1/hls/v5/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGQ5ZDlfMWVjNmIxYTAyYzZlMTdhNjY5OGIwMTZhNWFhMmIyZDc3NDkxYWQyZjdlMDM4MjUwNzY3ZGZkMWMyMDE3OGFiNA%3D%3D&pubid=5502557046001",
+              "url": "http://manifest.prod.boltdns.net/manifest/v1/hls/v5/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGY5MTRfYzAwZWUxMGFkYmFiZDNjZjBkYjEwOWJkN2M4MTBkNzEwYTU1MTg2MTlmMjU1Nzk2NDJhN2ZmNjFjODZkMGZjNg%3D%3D&pubid=5502557046001",
               "width": 0
             },
             {
               "height": 0,
               "mime_type": "application/x-mpegURL",
-              "url": "https://manifest.prod.boltdns.net/manifest/v1/hls/v5/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGQ5ZDlfMWVjNmIxYTAyYzZlMTdhNjY5OGIwMTZhNWFhMmIyZDc3NDkxYWQyZjdlMDM4MjUwNzY3ZGZkMWMyMDE3OGFiNA%3D%3D&pubid=5502557046001",
+              "url": "https://manifest.prod.boltdns.net/manifest/v1/hls/v5/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGY5MTRfYzAwZWUxMGFkYmFiZDNjZjBkYjEwOWJkN2M4MTBkNzEwYTU1MTg2MTlmMjU1Nzk2NDJhN2ZmNjFjODZkMGZjNg%3D%3D&pubid=5502557046001",
               "width": 0
             },
             {
               "height": 0,
               "mime_type": "application/dash+xml",
-              "url": "http://manifest.prod.boltdns.net/manifest/v1/dash/live-baseurl/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/2s/manifest.mpd?fastly_token=NWJjNGQ5ZDlfZmY2MWRmNmY1Yzg0ZmYxNTJjODI4Y2FkMDNiNzFiN2I2MTJmMGU5Yzk5NjdiMTc1ZjUyMGQyZDBiNTY3NzJhZg%3D%3D&pubid=5502557046001",
+              "url": "http://manifest.prod.boltdns.net/manifest/v1/dash/live-baseurl/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/2s/manifest.mpd?fastly_token=NWJjNGY5MTRfNTY4MmZlMzRlYWI2ZjIyY2I4ZDBiNzcyYjBlNDA3NTVhOTIwOGE5MjUwYWViMmNiYWQ2Mjk3ZDdiOTEyZDY5ZA%3D%3D&pubid=5502557046001",
               "width": 0
             },
             {
               "height": 0,
               "mime_type": "application/dash+xml",
-              "url": "https://manifest.prod.boltdns.net/manifest/v1/dash/live-baseurl/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/2s/manifest.mpd?fastly_token=NWJjNGQ5ZDlfZmY2MWRmNmY1Yzg0ZmYxNTJjODI4Y2FkMDNiNzFiN2I2MTJmMGU5Yzk5NjdiMTc1ZjUyMGQyZDBiNTY3NzJhZg%3D%3D&pubid=5502557046001",
+              "url": "https://manifest.prod.boltdns.net/manifest/v1/dash/live-baseurl/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/2s/manifest.mpd?fastly_token=NWJjNGY5MTRfNTY4MmZlMzRlYWI2ZjIyY2I4ZDBiNzcyYjBlNDA3NTVhOTIwOGE5MjUwYWViMmNiYWQ2Mjk3ZDdiOTEyZDY5ZA%3D%3D&pubid=5502557046001",
               "width": 0
             },
             {
               "height": 720,
               "mime_type": "video/mp4",
-              "url": "http://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4?akamai_token=exp=1539627481~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4*~hmac=222e7360a4a7522d5e11b0a39172828e3787a34e5230e1830535074340d1dd27&pubid=5502557046001",
+              "url": "http://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4?akamai_token=exp=1539635476~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4*~hmac=944407162300af558a4e4822adad1ced67cee85b9f8321bcaa7fdb391cb56611&pubid=5502557046001",
               "width": 1280
             },
             {
               "height": 720,
               "mime_type": "video/mp4",
-              "url": "https://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4?akamai_token=exp=1539627481~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4*~hmac=222e7360a4a7522d5e11b0a39172828e3787a34e5230e1830535074340d1dd27&pubid=5502557046001",
+              "url": "https://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4?akamai_token=exp=1539635476~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4*~hmac=944407162300af558a4e4822adad1ced67cee85b9f8321bcaa7fdb391cb56611&pubid=5502557046001",
               "width": 1280
             },
             {
               "height": 270,
               "mime_type": "video/mp4",
-              "url": "http://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4?akamai_token=exp=1539627481~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4*~hmac=593d33be5558f020476657f3f48a4002a0cbbfbdfe108d3b6c266c08a3ceed26&pubid=5502557046001",
+              "url": "http://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4?akamai_token=exp=1539635476~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4*~hmac=d874d286e509694121a39385038753790120f535c7cca87624d3170acab34cdf&pubid=5502557046001",
               "width": 480
             },
             {
               "height": 270,
               "mime_type": "video/mp4",
-              "url": "https://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4?akamai_token=exp=1539627481~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4*~hmac=593d33be5558f020476657f3f48a4002a0cbbfbdfe108d3b6c266c08a3ceed26&pubid=5502557046001",
+              "url": "https://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4?akamai_token=exp=1539635476~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4*~hmac=d874d286e509694121a39385038753790120f535c7cca87624d3170acab34cdf&pubid=5502557046001",
               "width": 480
             }
           ]
@@ -178,61 +178,61 @@
               {
                 "height": 0,
                 "mime_type": "application/x-mpegURL",
-                "url": "http://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGQ5ZDlfNTlkMzA1ZGIxOTk0ZTM3MTc0NGRiZDJkNzM0OWZmOGNmYWMxOTIzZmVjYWE4MDA2YTZkZmI0ZDBjNTg1ZDAzMg%3D%3D&pubid=5502557046001",
+                "url": "http://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGY5MTRfZDBjMWY2YzY5NzIzNWE3ZDY1MmM0Y2UxM2RjZmYyOGE1ODVmMzU1ZDczMGU0Nzc5MTFlOWEwNDY0ZDAwM2IxYw%3D%3D&pubid=5502557046001",
                 "width": 0
               },
               {
                 "height": 0,
                 "mime_type": "application/x-mpegURL",
-                "url": "https://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGQ5ZDlfNTlkMzA1ZGIxOTk0ZTM3MTc0NGRiZDJkNzM0OWZmOGNmYWMxOTIzZmVjYWE4MDA2YTZkZmI0ZDBjNTg1ZDAzMg%3D%3D&pubid=5502557046001",
+                "url": "https://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGY5MTRfZDBjMWY2YzY5NzIzNWE3ZDY1MmM0Y2UxM2RjZmYyOGE1ODVmMzU1ZDczMGU0Nzc5MTFlOWEwNDY0ZDAwM2IxYw%3D%3D&pubid=5502557046001",
                 "width": 0
               },
               {
                 "height": 0,
                 "mime_type": "application/x-mpegURL",
-                "url": "http://manifest.prod.boltdns.net/manifest/v1/hls/v5/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGQ5ZDlfMWVjNmIxYTAyYzZlMTdhNjY5OGIwMTZhNWFhMmIyZDc3NDkxYWQyZjdlMDM4MjUwNzY3ZGZkMWMyMDE3OGFiNA%3D%3D&pubid=5502557046001",
+                "url": "http://manifest.prod.boltdns.net/manifest/v1/hls/v5/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGY5MTRfYzAwZWUxMGFkYmFiZDNjZjBkYjEwOWJkN2M4MTBkNzEwYTU1MTg2MTlmMjU1Nzk2NDJhN2ZmNjFjODZkMGZjNg%3D%3D&pubid=5502557046001",
                 "width": 0
               },
               {
                 "height": 0,
                 "mime_type": "application/x-mpegURL",
-                "url": "https://manifest.prod.boltdns.net/manifest/v1/hls/v5/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGQ5ZDlfMWVjNmIxYTAyYzZlMTdhNjY5OGIwMTZhNWFhMmIyZDc3NDkxYWQyZjdlMDM4MjUwNzY3ZGZkMWMyMDE3OGFiNA%3D%3D&pubid=5502557046001",
+                "url": "https://manifest.prod.boltdns.net/manifest/v1/hls/v5/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/10s/master.m3u8?fastly_token=NWJjNGY5MTRfYzAwZWUxMGFkYmFiZDNjZjBkYjEwOWJkN2M4MTBkNzEwYTU1MTg2MTlmMjU1Nzk2NDJhN2ZmNjFjODZkMGZjNg%3D%3D&pubid=5502557046001",
                 "width": 0
               },
               {
                 "height": 0,
                 "mime_type": "application/dash+xml",
-                "url": "http://manifest.prod.boltdns.net/manifest/v1/dash/live-baseurl/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/2s/manifest.mpd?fastly_token=NWJjNGQ5ZDlfZmY2MWRmNmY1Yzg0ZmYxNTJjODI4Y2FkMDNiNzFiN2I2MTJmMGU5Yzk5NjdiMTc1ZjUyMGQyZDBiNTY3NzJhZg%3D%3D&pubid=5502557046001",
+                "url": "http://manifest.prod.boltdns.net/manifest/v1/dash/live-baseurl/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/2s/manifest.mpd?fastly_token=NWJjNGY5MTRfNTY4MmZlMzRlYWI2ZjIyY2I4ZDBiNzcyYjBlNDA3NTVhOTIwOGE5MjUwYWViMmNiYWQ2Mjk3ZDdiOTEyZDY5ZA%3D%3D&pubid=5502557046001",
                 "width": 0
               },
               {
                 "height": 0,
                 "mime_type": "application/dash+xml",
-                "url": "https://manifest.prod.boltdns.net/manifest/v1/dash/live-baseurl/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/2s/manifest.mpd?fastly_token=NWJjNGQ5ZDlfZmY2MWRmNmY1Yzg0ZmYxNTJjODI4Y2FkMDNiNzFiN2I2MTJmMGU5Yzk5NjdiMTc1ZjUyMGQyZDBiNTY3NzJhZg%3D%3D&pubid=5502557046001",
+                "url": "https://manifest.prod.boltdns.net/manifest/v1/dash/live-baseurl/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/2s/manifest.mpd?fastly_token=NWJjNGY5MTRfNTY4MmZlMzRlYWI2ZjIyY2I4ZDBiNzcyYjBlNDA3NTVhOTIwOGE5MjUwYWViMmNiYWQ2Mjk3ZDdiOTEyZDY5ZA%3D%3D&pubid=5502557046001",
                 "width": 0
               },
               {
                 "height": 720,
                 "mime_type": "video/mp4",
-                "url": "http://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4?akamai_token=exp=1539627481~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4*~hmac=222e7360a4a7522d5e11b0a39172828e3787a34e5230e1830535074340d1dd27&pubid=5502557046001",
+                "url": "http://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4?akamai_token=exp=1539635476~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4*~hmac=944407162300af558a4e4822adad1ced67cee85b9f8321bcaa7fdb391cb56611&pubid=5502557046001",
                 "width": 1280
               },
               {
                 "height": 720,
                 "mime_type": "video/mp4",
-                "url": "https://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4?akamai_token=exp=1539627481~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4*~hmac=222e7360a4a7522d5e11b0a39172828e3787a34e5230e1830535074340d1dd27&pubid=5502557046001",
+                "url": "https://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4?akamai_token=exp=1539635476~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/high.mp4*~hmac=944407162300af558a4e4822adad1ced67cee85b9f8321bcaa7fdb391cb56611&pubid=5502557046001",
                 "width": 1280
               },
               {
                 "height": 270,
                 "mime_type": "video/mp4",
-                "url": "http://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4?akamai_token=exp=1539627481~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4*~hmac=593d33be5558f020476657f3f48a4002a0cbbfbdfe108d3b6c266c08a3ceed26&pubid=5502557046001",
+                "url": "http://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4?akamai_token=exp=1539635476~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4*~hmac=d874d286e509694121a39385038753790120f535c7cca87624d3170acab34cdf&pubid=5502557046001",
                 "width": 480
               },
               {
                 "height": 270,
                 "mime_type": "video/mp4",
-                "url": "https://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4?akamai_token=exp=1539627481~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4*~hmac=593d33be5558f020476657f3f48a4002a0cbbfbdfe108d3b6c266c08a3ceed26&pubid=5502557046001",
+                "url": "https://bcbolt446c5271-a.akamaihd.net/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4?akamai_token=exp=1539635476~acl=/media/v1/pmp4/static/clear/5502557041001/1751b3a0-513a-4a3e-a99e-347939255d4e/mid.mp4*~hmac=d874d286e509694121a39385038753790120f535c7cca87624d3170acab34cdf&pubid=5502557046001",
                 "width": 480
               }
             ]
@@ -723,12 +723,28 @@
             "self": {
               "href": "/newsapi/v1/assets/217983250?publication=kansascity",
               "asset": {
-                "fault": {
-                  "detail": {
-                    "errorcode": "messaging.adaptors.http.flow.NoActiveTargets"
+                "_links": {
+                  "home_publication": {
+                    "href": "/newsapi/v1/publications/kansascity"
                   },
-                  "faultstring": "The Service is temporarily unavailable"
-                }
+                  "home_section": {
+                    "href": "/newsapi/v1/sections/2415"
+                  },
+                  "self": {
+                    "href": "/newsapi/v1/assets/217983250?publication=kansascity"
+                  }
+                },
+                "embed_code": "<blockquote class=\"twitter-tweet\" data-conversation=\"none\" data-lang=\"en\"><p lang=\"en\" dir=\"ltr\">This is my personal favorite... <a href=\"https://t.co/YIAYnzSNdL\">pic.twitter.com/YIAYnzSNdL</a></p>&mdash; Jeff Baxter (@JeffLBaxter) <a href=\"https://twitter.com/JeffLBaxter/status/1037930610143227904?ref_src=twsrc%5Etfw\">September 7, 2018</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+                "id": 217983250,
+                "modified_date": "2018-09-07T13:46:16Z",
+                "publication": {
+                  "long_name": "The Kansas City Star",
+                  "short_name": "kansascity"
+                },
+                "published_date": "2018-09-07T13:46:15Z",
+                "title": "RF",
+                "type": "embedInfographic",
+                "url": "https://www.kansascity.com/latest-news/article217983250.html"
               }
             }
           }

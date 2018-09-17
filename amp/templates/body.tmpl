@@ -3,7 +3,7 @@
 {{ $scratch.Set "body" (.body | replaceRe "^<div xmlns.*?>" "" | replaceRe "</div>$" "" | replaceRe "<p dir=\"ltr\">" "<p>") }}
 
 {{ range ._embedded.inline }}
-{{ $injectionPoint := printf "<p>[[:space:]]*<!-- %%asset:%.f(.*)?%% -->[[:space:]]*</p>" .id }}
+{{ $injectionPoint := printf "<p>[[:space:]]*<!-- %%asset:%.f(.*?)%% -->[[:space:]]*</p>" .id }}
 
 {{ with ._links.self.asset }}
   {{ if .brightcove_id }}
