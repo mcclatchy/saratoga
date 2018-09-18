@@ -1,11 +1,13 @@
 @font-face {
   font-family: "McClatchy Serif";
   src: url("https://www.kansascity.com/wps/source/fonts/mcclatchy-serif/McClatchySerif-Regular.woff");
+  /* Bold (600) needs to be added */
 }
 
 @font-face {
   font-family: "McClatchy Sans";
   src: url("https://www.kansascity.com/wps/source/fonts/mcclatchy-sans/McClatchySans-Regular.woff");
+  /* Bold (600) needs to be added */
 }
 
 @font-face {
@@ -47,7 +49,9 @@
 
 .story > h2, .story > h3, .story > h4, .story > h5, .story > h6 {
   margin-top: 2rem;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: "McClatchy Sans", sans-serif;
+  text-transform: uppercase;
 }
 
 .story p a {

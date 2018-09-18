@@ -8,7 +8,6 @@ body {
   margin: 0;
   background-color: #f4f4f4;
   color: #222;
-  font: 18px/1.4em "Lyon", serif;
 }
 
 a {
@@ -18,7 +17,7 @@ a {
 }
 
 h1 {
-  font: 500 30px/1.2em "McClatchy Serif", serif;
+  font: 600 30px/1.2em "McClatchy Serif", serif;
 }
 
 h2 {
@@ -30,15 +29,15 @@ h3 {
 }
 
 h4 {
-  font: 400 15px/1.2em "McClatchy Serif", serif;
+  font: 400 16px/1.2em "McClatchy Serif", serif;
 }
 
 h5 {
-  font: 500 14px/1.2em "McClatchy Sans", sans-serif;
+  font: 600 14px/1.2em "McClatchy Sans", sans-serif;
 }
 
 h6 {
-  font: 400 11px/1.2em "McClatchy Sans", sans-serif;
+  font: 400 12px/1.2em "McClatchy Sans", sans-serif;
 }
 
 p {
@@ -71,10 +70,9 @@ figure img {
 }
 
 figcaption {
-  font: 12px/1.4em "McClatchy Sans", sans-serif;
+  font: 14px/1.4em "McClatchy Sans", sans-serif;
   color: #757575;
   padding: 10px var(--spacing) 0;
-  max-width: 620px;
 }
 
 form > * + * {
