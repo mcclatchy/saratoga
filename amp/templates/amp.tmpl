@@ -131,7 +131,7 @@
       <section data-feed="latest">
         <div class="paper">
           <div class="label">
-            <h5>LATEST NEWS</h5>
+            <h5>LATEST STORIES</h5>
           </div>
           {{ range .results | slice 0 5 }}{{ with ._links.self.asset }}
           <article class="card-info">
@@ -167,7 +167,7 @@
       </article>
       {{ end }}
 
-      <amp-ad width="300" height="600" type="doubleclick" data-slot="/7675/KCM.site_kansascity/News"></amp-ad>
+      <amp-ad class="section-ad" width="300" height="600" type="doubleclick" data-slot="/7675/KCM.site_kansascity/News"></amp-ad>
 
       {{ with .section }}
       <section data-feed="moreInSection">

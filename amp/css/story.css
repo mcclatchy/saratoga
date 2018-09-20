@@ -280,6 +280,7 @@ amp-ad[type=doubleclick] {
 
     [data-feed=readNext] {
       grid-column: span 2;
+      grid-row: 1;
     }
 
     [data-feed=moreInSection] {
@@ -288,6 +289,10 @@ amp-ad[type=doubleclick] {
 
     .from-section {
       margin-bottom: 0;
+    }
+
+    .section-ad {
+      justify-self: center;
     }
   }
 }
