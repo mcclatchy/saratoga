@@ -280,7 +280,12 @@ amp-ad[type=doubleclick] {
 
     [data-feed=readNext] {
       grid-column: span 2;
-      grid-row: 1;
+    }
+
+    @media (max-width: 1000px) {
+      [data-feed=readNext] {
+        grid-row: 1;
+      }
     }
 
     [data-feed=moreInSection] {
