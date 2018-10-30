@@ -79,12 +79,15 @@
 }
 
 .author {
+  display: inline-block;
   font: 600 11px "McClatchy Sans";
   color: #757575;
+  text-transform: uppercase;
 }
 
 .credit {
   font-weight: 400;
+  font-style: italic;
 }
 
 .social-media {

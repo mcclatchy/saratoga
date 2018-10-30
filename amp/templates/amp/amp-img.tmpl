@@ -5,7 +5,11 @@
     height="9"
     srcset="{{ .file_url | replace "FREE" "LANDSCAPE" }} 1140w"
     alt="{{ .caption }}"></amp-img>
-  {{ with .caption }}
-  <figcaption>{{ . | replaceRe "<.*?>" "" }}</figcaption>
-  {{ end }}
+  <figcaption>
+  {{ with .caption }}{{ . | replaceRe "<.*?>" "" }}{{ end }}
+    <span class="author">
+      {{- with .photographer}}{{ . }}{{ end }}
+      {{- with .credit }} <span class="credit">{{ . }}</span>{{ end }}
+    </span>
+  </figcaption>
 </figure>
