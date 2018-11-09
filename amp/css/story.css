@@ -216,7 +216,9 @@ amp-ad[type=doubleclick] {
  */
 
 .zergnet {
-  margin-top: 50px;
+  margin: 50px auto;
+  max-width: 768px;
+  padding: 0 15px;
 }
 
 /**

@@ -112,17 +112,6 @@
 				</div>
 			</div>
 
-      <!-- Zergnet -->
-			<div class="zergnet">
-				<amp-embed 
-					width="780" 
-					height="100" 
-					heights="(max-width:370px) 165%, (max-width:450px) 150%, (max-width:550px) 130%, (max-width:600px) 125%, (max-width:645px) 125%, 125%" 
-					layout="responsive" 
-					type="zergnet" 
-					data-zergid="53354"></amp-embed>
-			</div>
-
       <div class="nativo">
         <amp-ad type="nativo"
           width="349"
@@ -196,6 +185,17 @@
         </div>
       </section>
       {{ end }}
+    </div>
+
+    <!-- Zergnet -->
+    <div class="zergnet">
+      <amp-embed 
+        width="768" 
+        height="768"
+        heights="(max-width: 320px) 630%, (max-width: 375px) 575%, (max-width: 420px) 550%, (max-width: 640px) 510%, (max-width: 769px) 460%, 140%"
+        layout="responsive"
+        type="zergnet" 
+        data-zergid="53329"></amp-embed>
     </div>
 
     {{ template "footer.tmpl" . }}
