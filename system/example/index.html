@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Saratoga design system example</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="../atoms.css">
+    <link rel="stylesheet" href="../molecules.css">
+    <link rel="stylesheet" href="../story.css">
+
+    <style>
+      @font-face {
+        font-family: "McClatchy Serif";
+        src: url("https://www.kansascity.com/wps/source/fonts/mcclatchy-serif/McClatchySerif-Regular.woff");
+        /* Bold (600) needs to be added */
+      }
+
+      @font-face {
+        font-family: "McClatchy Sans";
+        src: url("https://www.kansascity.com/wps/source/fonts/mcclatchy-sans/McClatchySans-Regular.woff");
+        /* Bold (600) needs to be added */
+      }
+
+      @font-face {
+        font-family: "Lyon";
+        src: url("https://www.kansascity.com/wps/source/fonts/lyon/LyonTextWeb-Regular.woff");
+      }
+
+      .grid, .container {
+        max-width: 1200px;
+        margin: 50px auto;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 30px;
+      }
+
+      @media (min-width: 500px) {
+        .grid, .container {
+          padding: 0 15px;
+        }
+      }
+
+      .grid .grid {
+        margin: 0;
+        padding: 0;
+      }
+
+      aside.grid {
+        margin-top: 0;
+        padding: 0;
+        max-width: 750px;
+        grid-gap: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <article class="story">
+      <header>
+        <h6><a class="kicker" href="#">Government &amp; Politics</a></h6>
+        <h1>Kobach, Colyer loyalists battle over which ballots will count in close governor race</h1>
+        <div class="card-info">
+          <address class="author">BY BRYAN LOWRY AND HUNTER WOODALL AND DION LEFLER AND ALLISON KITE</address>
+          <time>AUG 13, 2018, UPDATED 2 MONTHS AGO</time>
+          <div class="social-media">
+            <a href="https://twitter.com/share?text=Kobach%2C+Colyer+loyalists+battle+over+which+ballots+will+count+in+close+governor+race&amp;url=https%3A%2F%2Fwww.kansascity.com%2Fnews%2Fpolitics-government%2Farticle216625110.html">
+							<svg data-name="twitter" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.kansascity.com%2Fnews%2Fpolitics-government%2Farticle216625110.html">
+							<svg data-name="facebook" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+            </a>
+            <a href="mailto:?subject=Kobach%2C+Colyer+loyalists+battle+over+which+ballots+will+count+in+close+governor+race&amp;body=https%3A%2F%2Fwww.kansascity.com%2Fnews%2Fpolitics-government%2Farticle216625110.html">
+							<svg data-name="envelope" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure>
+        <img src="https://www.kansascity.com/latest-news/b59z53/picture216630505/alternates/LANDSCAPE_1140/Colyer%20and%20Kobach%20primary.jpg">
+        <figcaption>Secretary of State Kris Kobach (right) has pulled ahead of Gov. Jeff Colyer as counties count provisional votes. <span class="credit">FILE PHOTO</a></figcaption>
+      </figure>
+
+      <p>Small numbers of ballots in Johnson and Sedgwick counties are at the center of dispute between the backers of Gov. Jeff Colyer and Kansas Secretary of State Kris Kobach in a primary race that may eventually be settled in court.</p>
+      <p>Kansas law allows unaffiliated voters to declare their party on Election Day and vote in the primary, but the supporters of the two Republican rivals disagree whether this law puts the burden on voters or poll workers to ensure the paperwork is properly completed.</p>
+      <p>And the state’s two largest counties <a href="https://www.kansascity.com/news/politics-government/article216489915.html">don’t appear to be handling the issue uniformly.</a></p>
+
+      <div class="inline-cta card-info">
+        <h1>Inline Promo Headline</h1>
+        <p class="summary">Inline promo description here.</p>
+        <div class="buttons">
+          <a class="impact button">Button</a>
+          <a class="button">Additional Text</a>
+        </div>
+      </div>
+
+      <p>Assistant Secretary of State Eric Rucker, the deputy whom Kobach has tapped to oversee vote counting in the historically close election, said in a news release Sunday night that “if an unaffiliated voter does not complete a party affiliation document, that voter is not entitled to vote at a party primary election.”</p>
+      <p><a href="https://www.kansascity.com/news/politics-government/article216584870.html">Rucker issued his release less than 12 hours</a> before the bulk of the state’s counties, including its two most populous, were set to begin canvassing, a process that will determine whether <a href="https://www.kansascity.com/news/politics-government/article216446680.html">thousands of provisional ballots count</a> in a race where a few hundred votes separate the candidates. </p>
+
+      <hr>
+
+      <h2>Header 2 element</h2>
+      <h3>Header 3 element</h3>
+      <h4>Header 4 element</h4>
+      <h5>Header 5 element</h5>
+      <h6>Header 6 element</h6>
+
+      <hr>
+
+      <h5 style="margin-bottom: 0;">Related Stories</h5>
+      <aside class="grid">
+        <article class="card-info">
+          <h6><a class="kicker" href="https://www.kansascity.com/news/politics-government/election/">Elections</a></h6>
+          <h3><a href="https://www.kansascity.com/news/politics-government/election/article216602730.html">Sedgwick County adds 1,326 votes to election; counting rules differ in Johnson County</a></h3>
+          <time>Aug 13, 2018</time>
+        </article>
+        <article class="card-info">
+          <h6><a class="kicker" href="https://www.kansascity.com/news/politics-government/">Government &amp; Politics</a></h6>
+          <h3><a href="https://www.kansascity.com/news/politics-government/article216584870.html">Kobach deputy says unaffiliated voters can’t be counted; Colyer’s office disagrees</a></h3>
+          <time>Aug 13, 2018</time>
+        </article>
+        <article class="card-info">
+          <h6><a class="kicker" href="https://www.kansascity.com/news/politics-government/">Government &amp; Politics</a></h6>
+          <h3><a href="https://www.kansascity.com/news/politics-government/article216489915.html">JoCo accepts nearly 1,500 new votes. Not all unaffiliated voters’ ballots will count</a></h3>
+          <time>Aug 13, 2018</time>
+        </article>
+        <article class="card-info">
+          <h6><a class="kicker" href="https://www.kansascity.com/news/politics-government/">Government &amp; Politics</a></h6>
+          <h3><a href="https://www.kansascity.com/news/politics-government/article216483605.html">Kansas Democrats watch with glee as Republicans Colyer, Kobach fight over election</a></h3>
+          <time>Aug 12, 2018</time>
+        </article>
+      </aside>
+
+      <div class="author-card">
+				<div class="author-card-row">
+					<img class="author-card-thumbnail" src="./aaron_moody.jpg">
+					<h6 class="author author-card-name"><a href="mailto:amoody@newsobserver.com">AARON MOODY</a></h6>
+					<div class="social-media">
+						<a href="mailto:amoody@newsobserver.com">
+							<svg data-name="envelope" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+						</a>
+						<a href="https://twitter.com/aaron_moody1">
+							<svg data-name="twitter" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+						</a>
+						<a href="#">
+							<svg data-name="facebook" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+						</a>
+					</div>
+				</div>
+				<p class="summary">Aaron Moody is a sports and general reporter for the News &amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don't know.</p>
+        <div class="author-card-cta card-info">
+          <h4 class="summary">Support our work with a digital subscription</h4>
+          <a class="more-link">SUBSCRIBE TODAY</a>
+        </div>
+			</div>
+    </article>
+
+    <!-- Sample of flexible cards -->
+    <section class="grid">
+      <article class="card">
+        <figure>
+          <a href="https://mcclatchy.github.io/saratoga/opinion/205842254/">
+            <img src="https://www.kansascity.com/opinion/editorials/6yw1q3/picture205881139/ALTERNATES/LANDSCAPE_640/joshhawley" srcset="https://www.kansascity.com/opinion/editorials/6yw1q3/picture205881139/ALTERNATES/LANDSCAPE_1140/joshhawley 1140w"> 
+          </a>
+        </figure>
+        <div class="card-info">
+          <h6><a class="kicker" href="https://mcclatchy.github.io/saratoga/opinion/">OPINION</a></h6>
+          <h2><a href="https://mcclatchy.github.io/saratoga/opinion/205842254/">Missourians can’t trust Hawley investigation into Greitens’ use of text-destroying app</a></h2>
+          <time>March 19, 2018 2:29 pm</time>
+        </div>
+      </article>
+      <article class="card">
+        <figure>
+          <a href="https://mcclatchy.github.io/saratoga/opinion/205842254/">
+            <img src="https://www.kansascity.com/opinion/editorials/6yw1q3/picture205881139/ALTERNATES/LANDSCAPE_640/joshhawley" srcset="https://www.kansascity.com/opinion/editorials/6yw1q3/picture205881139/ALTERNATES/LANDSCAPE_1140/joshhawley 1140w"> 
+          </a>
+        </figure>
+        <div class="card-info">
+          <h6><a class="kicker" href="https://mcclatchy.github.io/saratoga/opinion/">OPINION</a></h6>
+          <h2><a href="https://mcclatchy.github.io/saratoga/opinion/205842254/">Missourians can’t trust Hawley investigation into Greitens’ use of text-destroying app</a></h2>
+          <time>March 19, 2018 2:29 pm</time>
+        </div>
+      </article>
+      <article class="card">
+        <figure>
+          <a href="https://mcclatchy.github.io/saratoga/opinion/205842254/">
+            <img src="https://www.kansascity.com/opinion/editorials/6yw1q3/picture205881139/ALTERNATES/LANDSCAPE_640/joshhawley" srcset="https://www.kansascity.com/opinion/editorials/6yw1q3/picture205881139/ALTERNATES/LANDSCAPE_1140/joshhawley 1140w"> 
+          </a>
+        </figure>
+        <div class="card-info">
+          <h6><a class="kicker" href="https://mcclatchy.github.io/saratoga/opinion/">OPINION</a></h6>
+          <h2><a href="https://mcclatchy.github.io/saratoga/opinion/205842254/">Missourians can’t trust Hawley investigation into Greitens’ use of text-destroying app</a></h2>
+          <time>March 19, 2018 2:29 pm</time>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sample of digests -->
+    <section class="grid">
+      <div>
+        <div class="paper">
+          <h5 class="label">
+            <a class="kicker impact" href="#">Latest News</a></h6>
+          </h5>
+          <article class="card-info"> 
+            <h3><a href="https://mcclatchy.github.io/saratoga/latest/205976594/">Syracuse's 'flat and farms' comment didn't sit well with people in Nebraska</a></h3>
+            <time>March 20, 2018 9:03 am</time>
+          </article>
+          <article class="card-info"> 
+            <h3><a href="https://mcclatchy.github.io/saratoga/latest/205978534/">Firefighters battle a two-alarm fire near I-70 and Van Brunt in Kansas City</a></h3>
+            <time>March 20, 2018 9:03 am</time>
+          </article>
+          <article class="card-info"> 
+            <h3><a href="https://mcclatchy.github.io/saratoga/latest/205760454/">Dashcam video surfaces of Miami bridge collapse from view of driver who witnessed it</a></h3>
+            <time>March 18, 2018 1:16 pm</time>
+          </article>
+          <article class="card-info"> 
+            <h3><a href="https://mcclatchy.github.io/saratoga/latest/205972369/">Former Mizzou player Jordan Clarkson thinks dinosaurs were once pets for giant humans</a></h3>
+            <time>March 20, 2018 8:03 am</time>
+          </article>
+          <article class="card-info"> 
+            <h3><a href="https://mcclatchy.github.io/saratoga/latest/205860839/">Eagles, including a couple of new kids, treat KC crowd to an evening of nostalgia</a></h3>
+            <time>March 20, 2018 7:42 am</time>
+          </article>
+        </div>
+        <a href="#" class="more-link">More latest news</a>
+      </div>
+      <section>
+        <div class="paper">
+          <h5 class="label sticky">
+            <a href="#" class="kicker impact">Food</a>
+          </h5>
+          <article class="card">
+            <figure>
+              <a href="https://mcclatchy.github.io/saratoga/food/200587314/">
+                <img src="https://www.kansascity.com/living/liv-columns-blogs/chow-town/qe49nl/picture200587309/ALTERNATES/LANDSCAPE_640/USE%20THIS%200221%20cimk%20lippe%2002122018%20sp%20%286%29" srcset="https://www.kansascity.com/living/liv-columns-blogs/chow-town/qe49nl/picture200587309/ALTERNATES/LANDSCAPE_1140/USE%20THIS%200221%20cimk%20lippe%2002122018%20sp%20%286%29 1140w"> 
+              </a>
+            </figure>
+            <div class="card-info">
+              <h3><a href="https://mcclatchy.github.io/saratoga/food/200587314/">With biscuits and gravy, a hot breakfast is on the table in minutes</a></h3>
+              <time>February 16, 2018 3:29 pm</time>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-info">
+              <h3><a href="https://mcclatchy.github.io/saratoga/food/16280207/">KC takes smoke beyond meats, and 35 other sizzling stories</a></h3>
+              <time>March 25, 2015 12:19 pm</time>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-info">
+              <h3><a href="https://mcclatchy.github.io/saratoga/food/199571794/">Hawaiian-themed restaurant opens in Belton; Lawrence location planned</a></h3>
+              <time>February 11, 2018 12:14 pm</time>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-info">
+              <h3><a href="https://mcclatchy.github.io/saratoga/food/199563534/">Kansas City’s pan-fried chicken place makes national ‘best’ fried chicken list</a></h3>
+              <time>February 11, 2018 9:29 am</time>
+            </div>
+          </article>
+        </div>
+        <a href="https://mcclatchy.github.io/saratoga/food/" class="more-link">MORE FOOD</a>
+      </section>
+      <section class="grid">
+        <div>
+          <div class="paper impact">
+            <h5 class="label">
+              <a href="#" class="kicker">Food</a>
+            </h5>
+            <article class="card">
+              <div class="card-info">
+                <h3><a href="https://mcclatchy.github.io/saratoga/food/200587314/">With biscuits and gravy, a hot breakfast is on the table in minutes</a></h3>
+                <time>February 16, 2018 3:29 pm</time>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-info">
+                <h3><a href="https://mcclatchy.github.io/saratoga/food/16280207/">KC takes smoke beyond meats, and 35 other sizzling stories</a></h3>
+                <time>March 25, 2015 12:19 pm</time>
+              </div>
+            </article>
+          </div>
+          <a href="https://mcclatchy.github.io/saratoga/food/" class="more-link">MORE FOOD</a>
+        </div>
+        <div class="ad" style="width: 300px; height: 250px;"></div>
+      </section>
+    </section>
+
+    <section class="container">
+      <div class="promo paper" style="grid-column: span 2;">
+        <div class="promo-title card-info">
+          <h1>SUPPORT LOCAL JOURNALISM</h1>
+          <h3 class="bold">#READLOCAL</h3>
+        </div>
+        <div class="promo-message card-info">
+          <p class="summary">Our journalism takes a lot of time, effort annd hard work to produce. If you readn an enjoy our journalism, please consider subscribing.</p>
+          <div class="buttons">
+            <a class="button impact" href="#">Subscribe Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="promo paper impact">
+        <div class="promo-title card-info">
+          <h1>PROMO GOES DARK</h1>
+          <h3 class="bold">#IMPACT</h3>
+        </div>
+        <div class="promo-message card-info">
+          <p class="summary">This is a promo in the impact style.</p>
+          <div class="buttons">
+            <a class="button primary" href="#">Action</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
