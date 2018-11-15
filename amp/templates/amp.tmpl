@@ -111,35 +111,10 @@
 					<a class="more-link">SUBSCRIBE TODAY</a>
 				</div>
 			</div>
-
-      <div class="nativo">
-        <amp-ad type="nativo"
-          width="349"
-          height="377"
-          layout="responsive"
-          data-request-url="http://amp.kansascity.com/amp/news/politics-government/article221193305.html"></amp-ad>
-      </div>
     </article>
     {{ end }}
 
     <div class="section grid">
-
-      {{ with .latest }}
-      <section data-feed="latest">
-        <div class="paper">
-          <div class="label">
-            <h5>LATEST STORIES</h5>
-          </div>
-          {{ range .results | slice 0 5 }}{{ with ._links.self.asset }}
-          <article class="card-info">
-            <h3><a href="{{ .web_url }}">{{ .title }}</a></h3>
-            <time>{{ dateFormat .published_date "2006-01-02T15:04:05Z" "Jan 2, 2006" }}</time>
-          </article>
-          {{ end }}{{ end }}
-        </div>
-        <a class="more-link" href="#/latest-news">MORE IN LATEST NEWS</a>
-      </section>
-      {{ end }}
 
       <!-- read next -->
       {{ with .readNext }}
@@ -164,7 +139,37 @@
       </article>
       {{ end }}
 
-      <amp-ad class="section-ad" width="300" height="600" type="doubleclick" data-slot="/7675/KCM.site_kansascity/News"></amp-ad>
+			<!-- Zergnet -->
+			<div class="zergnet">
+				<amp-embed 
+					width="780" 
+					height="100"
+					heights="(max-width:370px) 165%, (max-width:450px) 130%, (max-width:550px) 130%, (max-width:600px) 125%, (max-width:645px) 125%, 135%"
+					layout="responsive"
+					type="zergnet" 
+					data-zergid="53354"></amp-embed>
+			</div>
+
+      {{ with .latest }}
+      <section data-feed="latest">
+        <div class="paper">
+          <div class="label">
+            <h5>LATEST STORIES</h5>
+          </div>
+          {{ range .results | slice 0 5 }}{{ with ._links.self.asset }}
+          <article class="card-info">
+            <h3><a href="{{ .web_url }}">{{ .title }}</a></h3>
+            <time>{{ dateFormat .published_date "2006-01-02T15:04:05Z" "Jan 2, 2006" }}</time>
+          </article>
+          {{ end }}{{ end }}
+        </div>
+        <a class="more-link" href="#/latest-news">MORE IN LATEST NEWS</a>
+      </section>
+      {{ end }}
+		</div>
+
+		<div class="section grid">
+			<amp-ad class="ad section-ad" width="300" height="600" type="doubleclick" data-slot="/7675/KCM.site_kansascity/News"></amp-ad>
 
       {{ with .section }}
       <section data-feed="moreInSection">
@@ -185,17 +190,6 @@
         </div>
       </section>
       {{ end }}
-    </div>
-
-    <!-- Zergnet -->
-    <div class="zergnet">
-      <amp-embed 
-        width="768" 
-        height="768"
-        heights="(max-width: 320px) 630%, (max-width: 375px) 575%, (max-width: 420px) 550%, (max-width: 640px) 510%, (max-width: 769px) 460%, 140%"
-        layout="responsive"
-        type="zergnet" 
-        data-zergid="53329"></amp-embed>
     </div>
 
     {{ template "footer.tmpl" . }}
