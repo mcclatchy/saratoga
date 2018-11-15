@@ -52,7 +52,8 @@
 /** Inline CTA */
 
 .inline-cta {
-  margin: 35px auto;
+  display: block;
+  margin: 50px auto;
 }
 
 /** Author card */
