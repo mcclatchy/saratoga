@@ -1,0 +1,67 @@
+/**
+ * Grid
+ */
+
+@supports(display: grid) {
+  @media (min-width: 768px) {
+    .grid {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 30px;
+      align-items: normal;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+      "next next"
+      "latest ad"
+      "spill spill"
+      "zergnet zergnet";
+    }
+
+    [data-feed=readNext] {
+      grid-area: next;
+    }
+
+    [data-feed=latest] {
+      grid-area: latest;
+    }
+
+    [data-feed=moreInSection] {
+      grid-area: spill;
+    }
+
+    [data-feed=moreInSection] .grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "..";
+    }
+
+    .section {
+      padding: 30px;
+    }
+
+    .section > *, .from-section {
+      margin: 0;
+    }
+
+    .zergnet {
+      grid-area: zergnet;
+      max-width: 540px;
+      justify-self: center;
+    }
+
+    .section-ad {
+      grid-area: ad;
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 990px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+      "latest next next"
+      "ad spill spill"
+      "zergnet zergnet zergnet";
+    }
+  }
+}

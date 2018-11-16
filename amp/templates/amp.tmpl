@@ -17,7 +17,8 @@
       {{- file "./css/molecules.css" | minify "text/css" }}
       {{- file "./css/masthead.css" | minify "text/css" }}
       {{- file "./css/footer.css" | minify "text/css" }}
-      {{- file "./css/story.css" | minify "text/css" -}}
+      {{- file "./css/story.css" | minify "text/css" }}
+			{{- file "./css/grid.css" | minify "text/css" -}}
     </style>
 
     <!-- Relay media determines which ones the page needs instead of including everything -->
@@ -115,7 +116,6 @@
     {{ end }}
 
     <div class="section grid">
-
       <!-- read next -->
       {{ with .readNext }}
       <article class="card" data-feed="readNext">
@@ -166,10 +166,8 @@
         <a class="more-link" href="#/latest-news">MORE IN LATEST NEWS</a>
       </section>
       {{ end }}
-		</div>
 
-		<div class="section grid">
-			<amp-ad class="ad section-ad" width="300" height="600" type="doubleclick" data-slot="/7675/KCM.site_kansascity/News"></amp-ad>
+			<amp-ad class="section-ad" width="300" height="600" type="doubleclick" data-slot="/7675/KCM.site_kansascity/News"></amp-ad>
 
       {{ with .section }}
       <section data-feed="moreInSection">
