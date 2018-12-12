@@ -93,7 +93,7 @@ input[type=submit] {
 }
 
 button, .button {
-  font: 400 14px "McClatchy Sans";
+  font: 600 14px "McClatchy Sans";
   padding: .6em 1em .3em;
   border-radius: 2px;
   text-transform: uppercase;
