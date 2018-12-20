@@ -125,3 +125,52 @@
   background-color: transparent;
   box-shadow: none;
 }
+
+/**
+ * Series Nav
+ */
+
+.series-nav {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.series-nav .summary {
+  color: #989898;
+}
+
+.series-nav .toggle {
+  cursor: pointer;
+  outline: none;
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.series-nav i {
+  margin-right: 5px;
+  transition: transform .5s ease;
+}
+
+.series-nav.open i {
+  transform: rotateX(180deg);
+}
+
+.series-nav .article {
+  display: flex;
+  margin: 15px 0;
+}
+
+.series-nav .article figure {
+  width: 80px;
+}
+
+.series-nav .article .title {
+  flex: 1;
+  margin: 0;
+  padding: 0 15px;
+  max-width: 375px;
+}
+
+.series-nav.closed section {
+  display: none;
+}

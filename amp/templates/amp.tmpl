@@ -10,6 +10,8 @@
 		<link rel="canonical" href="{{ .web_url }}">
     {{- end -}}
 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     <style amp-custom>
@@ -30,6 +32,7 @@
     <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
     <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+		<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
   </head>
   <body>
     <amp-state id="menuState">
@@ -67,6 +70,52 @@
       </header>
 
       {{ template "lead-media.tmpl" . }}
+
+			<amp-state id="seriesNav">
+				<script type="application/json">
+					{
+						"open": {
+							"text": "COLLAPSE ALL"
+						},
+						"closed": {
+							"text": "EXPAND ALL"
+						}
+					}
+				</script>
+			</amp-state>
+
+			<div class="series-nav card-info closed" [class]="'series-nav card-info ' + seriesNavState">
+				<h5>MORE FROM THE SERIES</h5>
+				<hr>
+				<h3>Venezuela’s deadly migration</h3>
+				<p class="summary">More than 40 young women who fled economic turmoil in Venezuela hoping to improve their lives elsewhere in Latin America have wound up dead over the past 18 months.</p>
+				<h5 class="toggle" on="tap:AMP.setState({seriesNavState: seriesNavState == 'open' ? 'closed' : 'open'})" role="button" tabindex="-1">
+					<i class="fas fa-chevron-down"></i> 
+					<span [text]="seriesNav[seriesNavState].text">EXPAND ALL</span>
+				</h5>
+				<hr>
+				<section>
+					<a class="article" href="https://www.miamiherald.com/news/nation-world/world/americas/venezuela/article221945570.html#storylink=series">
+						<figure>
+							<amp-img layout="responsive" width="16" height="9" src="https://www.miamiherald.com/latest-news/722q03/picture222631695/alternates/LANDSCAPE_1140/Keyframe1_MH.jpg">
+						</figure>
+						<h4 class="title">Women are fleeing Venezuela for a better life. They’re turning up dead.</h4>
+					</a>
+					<a class="article" href="https://www.miamiherald.com/news/nation-world/world/americas/venezuela/article222244030.html#storylink=series">
+						<figure>
+							<amp-img layout="responsive" width="16" height="9" src="https://www.miamiherald.com/latest-news/gj3f9s/picture222628815/alternates/LANDSCAPE_1140/Keyframe2.png">
+						</figure>
+						<h4 class="title">They left Venezuela with dreams. They were met with forced prostitution — and their deaths</h4>
+					</a>
+					<a class="article" href="https://www.miamiherald.com/news/nation-world/world/americas/venezuela/article222377405.html#storylink=series">
+						<figure>
+							<amp-img layout="responsive" width="16" height="9" src="https://www.miamiherald.com/latest-news/6s0zku/picture222627840/alternates/LANDSCAPE_1140/Miami%20(Cruise)_Bumper_REV2.00_01_04_16.Still007.jpg">
+						</figure>
+						<h4 class="title">They want justice after their daughters were killed abroad. But it’s like the murders never happened</h4>
+					</a>
+				</section>
+			</div>
+
       {{ template "body.tmpl" . }}
 
       {{ $relatedStories := where ._links.related ".href" "matches" "/v1/stories/" }}

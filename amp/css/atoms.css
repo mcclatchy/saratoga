@@ -97,6 +97,10 @@ input[type=submit] {
   color: inherit;
 }
 
+hr {
+  border: solid .5px #dfdfdf;
+}
+
 /**
  * Typography
  */
@@ -148,7 +152,6 @@ input[type=submit] {
   align-items: center;
   font: 500 14px/18px "McClatchy Sans";
   color: #989898;
-  /* margin: 15px 15px 0; */
   margin-top: var(--spacing);
 }
 
