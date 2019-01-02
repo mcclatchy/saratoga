@@ -21,6 +21,7 @@
       {{- file "./css/footer.css" | minify "text/css" }}
       {{- file "./css/story.css" | minify "text/css" }}
 			{{- file "./css/grid.css" | minify "text/css" -}}
+			{{- file "./css/inline-gallery.css" | minify "text/css" -}}
     </style>
 
     <!-- Relay media determines which ones the page needs instead of including everything -->
@@ -33,6 +34,7 @@
     <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 		<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+		<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
   </head>
   <body>
     <amp-state id="menuState">
@@ -117,6 +119,8 @@
 			</div>
 
       {{ template "body.tmpl" . }}
+
+			{{ template "inline-gallery.tmpl" . }}
 
       {{ $relatedStories := where ._links.related ".href" "matches" "/v1/stories/" }}
       {{ with $relatedStories }}
@@ -248,6 +252,5 @@
     <amp-ad shim=".story > p:nth-of-type(20) + p" width="300" height="250" type="doubleclick" data-slot="/7675/KCM.site_kansascity/News"></amp-ad>
     <amp-ad shim=".story > p:nth-of-type(25) + p" width="300" height="250" type="doubleclick" data-slot="/7675/KCM.site_kansascity/News"></amp-ad>
     <amp-ad shim=".story > p:nth-of-type(30) + p" width="300" height="250" type="doubleclick" data-slot="/7675/KCM.site_kansascity/News"></amp-ad>
-
   </body>
 </html>

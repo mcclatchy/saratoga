@@ -1,0 +1,49 @@
+.inline-gallery {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.ig-slides figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.ig-slides amp-img {
+  background-color: #f4f4f4;
+}
+
+.ig-slides amp-img img {
+  object-fit: contain;
+}
+
+.ig-slides figcaption {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ig-thumbs button {
+  width: 160px;
+  height: 90px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ig-thumbs {
+  margin-top: 15px;
+}
+
+.ig-thumbs .amp-carousel-button {
+  height: 100%;
+  top: 0;
+  transform: translateY(0);
+  background-color: rgba(55,55,55,0.9);
+}
+
+.ig-thumbs .amp-carousel-button-next {
+  right: 0;
+}
+
+.ig-thumbs .amp-carousel-button-prev {
+  left: 0;
+}
