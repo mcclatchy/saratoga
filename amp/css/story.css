@@ -148,7 +148,7 @@ amp-ad[type=doubleclick] {
 .related-stories > h5 {
   margin-top: 0;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .related-stories .card-info {
@@ -261,7 +261,7 @@ amp-ad[type=doubleclick] {
 .group-label {
   margin: var(--spacing);
   margin-top: 0;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .from-section figcaption {
