@@ -85,6 +85,11 @@
   text-transform: uppercase;
 }
 
+.author a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .credit {
   font-weight: 400;
   font-style: italic;
