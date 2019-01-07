@@ -1,13 +1,24 @@
 @font-face {
   font-family: "McClatchy Serif";
-  src: url("https://www.kansascity.com/wps/source/fonts/mcclatchy-serif/McClatchySerif-Regular.woff");
+  src: url("https://amp.kansascity.com/wps/source/fonts/mcclatchy-serif/McClatchySerif-Regular.woff");
   /* Bold (600) needs to be added */
 }
 
 @font-face {
   font-family: "McClatchy Sans";
-  src: url("https://www.kansascity.com/wps/source/fonts/mcclatchy-sans/McClatchySans-Regular.woff");
-  /* Bold (600) needs to be added */
+  src: url("https://amp.kansascity.com/wps/source/fonts/mcclatchy-sans/McClatchySans-Regular.woff");
+}
+
+@font-face {
+  font-family: "McClatchy Sans";
+  src: url("https://amp.kansascity.com/wps/source/fonts/mcclatchy-sans/McClatchySans-Semibold.woff");
+	font-weight: 700;
+}
+
+@font-face {
+  font-family: "McClatchy Sans";
+  src: url("https://amp.kansascity.com/wps/source/fonts/mcclatchy-sans/McClatchySans-Medium.otf");
+	font-weight: 600;
 }
 
 @font-face {
@@ -80,7 +91,7 @@
 
 .author {
   display: inline-block;
-  font: 600 11px "McClatchy Sans";
+  font: 400 11px "McClatchy Sans";
   color: #757575;
   text-transform: uppercase;
 }
