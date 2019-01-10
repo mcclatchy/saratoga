@@ -3,6 +3,18 @@
   margin-bottom: 30px;
 }
 
+.ig-window {
+  position: relative;
+}
+
+.ig-slides {
+  margin-bottom: 30px;
+}
+
+.ig-slides .amp-carousel-button {
+  display: none;
+}
+
 .ig-slides figure {
   display: flex;
   flex-direction: column;
@@ -16,9 +28,72 @@
   object-fit: contain;
 }
 
+.ig-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+  align-items: flex-end;
+}
+
+.show-caption .ig-caption {
+  display: flex;
+}
+
 .ig-slides figcaption {
-  padding-left: 0;
-  padding-right: 0;
+  color: white;
+  padding: 15px;
+}
+
+.ig-slides .author {
+  color: white;
+}
+
+.ig-caption-toggle {
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.ig-caption-open {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  position: relative;
+  top: .12em;
+}
+
+.show-caption .ig-caption-open {
+  display: none;
+}
+
+.ig-caption-close {
+  fill: white;
+  height: 20px;
+  width: 20px;
+  display: none;
+}
+
+.show-caption .ig-caption-close {
+  display: block;
+}
+
+.inline-gallery.show-caption .caption-toggle h5 {
+  display: none;
+}
+
+.inline-gallery.show-caption .ig-caption-close {
+  display: block;
 }
 
 .ig-title {
