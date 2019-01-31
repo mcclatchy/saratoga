@@ -101,11 +101,30 @@
 }
 
 .ig-thumbs button {
-  width: 160px;
+  position: relative;
+  width: 25%;
   height: 90px;
   border: none;
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: 690px) {
+  .ig-thumbs button {
+    width: 20%;
+  }
+}
+
+.ig-thumbs amp-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.ig-thumbs amp-img img {
+  object-fit: cover;
 }
 
 .ig-thumbs .amp-carousel-button {
